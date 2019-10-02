@@ -1,4 +1,4 @@
-baseurl = "http://alexrrblogger.surge.sh"
+baseurl = "http://alexblog.surge.sh"
 title = "Alexblog"
 
 theme = "hugo-coder-portfolio"
@@ -77,9 +77,9 @@ disqusShortname = "yourdiscussshortname"
         [languages.en.menu] # It is possible to change the menu too.
 
             [[languages.en.menu.main]]
-                name = "Sobre mí"
+                name = "Sobre mi"
                 weight = 1.0
-                url = "about"
+                url = "sobre"
 
             [[languages.en.menu.main]]
                 name = "Blog"
@@ -87,7 +87,7 @@ disqusShortname = "yourdiscussshortname"
                 url = "posts"
 
             [[languages.en.menu.main]]
-                name = "Contactáctame"
+                name = "Contactame"
                 weight = 5
-                url = "contact"
+                url = "contactar"
 

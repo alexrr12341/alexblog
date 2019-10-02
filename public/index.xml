@@ -2,127 +2,72 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Alexblog</title>
-    <link>http://alexrrblogger.surge.sh/</link>
+    <link>http://alexblog.surge.sh/</link>
     <description>Recent content on Alexblog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 03 Aug 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 02 Oct 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://alexrrblogger.surge.sh/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://alexblog.surge.sh/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>CoderPortfolioの特徴</title>
-      <link>http://alexrrblogger.surge.sh/posts/featuresofcoderportfolio.ja/</link>
-      <pubDate>Fri, 03 Aug 2018 00:00:00 +0000</pubDate>
+      <title>Script para seleccionar paquetes por repositorio</title>
+      <link>http://alexblog.surge.sh/posts/scriptrepositorio/</link>
+      <pubDate>Wed, 02 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://alexrrblogger.surge.sh/posts/featuresofcoderportfolio.ja/</guid>
-      <description>変更点 ShortCode &amp;ldquo;private content&amp;rdquo;を追加しました 綺麗なサイトを崩さずに、あなたの個人的なコンテンツ（趣味や感情）を簡単に伝えることができます。
-実際の動きについては、&amp;rdquo;テーマデモ&amp;rdquo;をご覧ください。
-リンクに赤い下線のアニメーションを追加しました サイトがよりカラフルに美しくなりました。
-SNSシェアのボタンを追加しました あなたの記事がより影響力を持つようになりました。
-コードのハイライトを変更しました 日本のサービス Qiita のハイライトを参照しました。
-とても優しく美しいハイライトです。
-ヘッダーに影を追加しました より境界線がはっきりしました。
-ShortCode &amp;ldquo;portfolio&amp;rdquo;を追加しました あなたの作品を綺麗に表示できるようになりました。 実際の動きについては、&amp;rdquo;テーマデモ&amp;rdquo;をご覧ください。</description>
+      <guid>http://alexblog.surge.sh/posts/scriptrepositorio/</guid>
+      <description> Script para seleccionar paquetes por repositorio #!/bin/sh  echo &amp;#34;¿Que repositorio quieres buscar?(Debe estar en /etc/apt/sources.list)&amp;#34; read repositorio reposistema=`cat /etc/apt/sources.list | grep -o $repositorio | head -1` #Aqui hacemos que si el repositorio está en el sistema avance el programa, sino simplemente finalice if [ $repositorio = $reposistema ]; then echo &amp;#34;Repositorio encontrado&amp;#34; #Aqui encuentra los paquetes que estan instalados en el sistema for paquetes in $(dpkg -l | grep &amp;#39;^ii&amp;#39;| awk &amp;#39;{print $2}&amp;#39;); do #Aqui está diciendo que si el repositorio se encuentra en el apt policy, entonces que mande por la terminal el paquete if [ $repositorio = $(apt policy $paquetes 2&amp;gt;/dev/null | egrep &amp;#39;\*\*\*&amp;#39; -A1 | tail -1 | awk &amp;#39;{print $2}&amp;#39;) ];then echo $paquetes fi done else echo &amp;#34;Este repositorio no existe&amp;#34; fi</description>
     </item>
     
     <item>
-      <title>Features Of CoderPortfolio</title>
-      <link>http://alexrrblogger.surge.sh/posts/featuresofcoderportfolio/</link>
-      <pubDate>Fri, 03 Aug 2018 00:00:00 +0000</pubDate>
+      <title>Servidor DHCP</title>
+      <link>http://alexblog.surge.sh/posts/creating-a-new-theme/</link>
+      <pubDate>Wed, 02 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://alexrrblogger.surge.sh/posts/featuresofcoderportfolio/</guid>
-      <description>Change Point &amp;ldquo;private content&amp;rdquo; short code added. It is now possible to communicate your personal hobby and your own content.
-You can use it easily. Please see &amp;ldquo;theme-demo&amp;rdquo; for details and demo.
-An animation of red underline was added to Anchor. The site became a little fun and colorful.
-The button of the SNS share was added. It became to have an influence when writing articles more.
-Changed the color scheme of code highlight.</description>
+      <guid>http://alexblog.surge.sh/posts/creating-a-new-theme/</guid>
+      <description>##Servidor DHCP
+Tarea 2 (1 punto)(Obligatorio): Entrega el fichero Vagrantfile que define el escenario.
+$script = &amp;lt;&amp;lt;-SCRIPT apt-get update apt-get -y install isc-dhcp-server SCRIPT Vagrant.configure(&amp;#34;2&amp;#34;) do |config| config.vm.define :nodo_lan1 do |lan1| lan1.vm.box = &amp;#34;debian/buster64&amp;#34; lan1.vm.hostname = &amp;#34;nodolan1&amp;#34; lan1.vm.network :private_network,type: &amp;#34;dhcp&amp;#34;, virtualbox__intnet: &amp;#34;dhcp&amp;#34; lan1.vm.provision &amp;#34;shell&amp;#34;,run: &amp;#34;always&amp;#34;,inline: &amp;#34;ip r del default via 10.0.2.2&amp;#34; end config.vm.define :Servidor do |servidor| servidor.vm.box = &amp;#34;debian/buster64&amp;#34; servidor.vm.hostname = &amp;#34;Servidor&amp;#34; servidor.vm.network :private_network, ip: &amp;#34;192.168.100.1&amp;#34;, virtualbox__intnet: &amp;#34;dhcp&amp;#34; servidor.vm.network :public_network,:bridge=&amp;gt;&amp;#34;wlp0s20f3&amp;#34;,use_dhcp_assigned_default_route: true servidor.</description>
     </item>
     
     <item>
-      <title>Theme Demo</title>
-      <link>http://alexrrblogger.surge.sh/posts/theme-demo/</link>
-      <pubDate>Fri, 03 Aug 2018 00:00:00 +0000</pubDate>
+      <title>Ejercicio Raid 5</title>
+      <link>http://alexblog.surge.sh/posts/raid5/</link>
+      <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://alexrrblogger.surge.sh/posts/theme-demo/</guid>
-      <description>Style Demo h1 Heading h2 Heading h3 Heading h4 Heading h5 Heading h6 Heading This is bold text
-This is bold text
-This is italic text
-This is italic text
-Deleted text
-This is text with inline math $\sum_{n=1}^{\infty} 2^{-n} = 1$ and with math blocks:
-$$ \sum_{n=1}^{\infty} 2^{-n} = 1 $$
-   Heading Another heading     text text   text text   text text     Block quotes are written like so.</description>
+      <guid>http://alexblog.surge.sh/posts/raid5/</guid>
+      <description>Ejercicio Raid 5 Fichero de Configuración
+Vagrant.configure(&amp;#34;2&amp;#34;) do |config| config.vm.define :raid5 do |raid5| disco = &amp;#39;.vagrant/discoraid1.vdi&amp;#39; disco2 = &amp;#39;.vagrant/discoraid2.vdi&amp;#39; disco3 = &amp;#39;.vagrant/discoraid3.vdi&amp;#39; raid5.vm.box = &amp;#34;debian/buster64&amp;#34; raid5.vm.hostname = &amp;#34;EscenarioRaid&amp;#34; raid5.vm.provision &amp;#34;shell&amp;#34;,run: &amp;#34;always&amp;#34;,inline: &amp;#34;apt-get update&amp;#34; raid5.vm.provision &amp;#34;shell&amp;#34;,run: &amp;#34;always&amp;#34;,inline: &amp;#34;apt-get -y upgrade&amp;#34; raid5.vm.provision &amp;#34;shell&amp;#34;,run: &amp;#34;always&amp;#34;,inline: &amp;#34;apt-get -y install mdadm&amp;#34; raid5.vm.provision &amp;#34;shell&amp;#34;,run: &amp;#34;always&amp;#34;,inline: &amp;#34;apt-get -y install lvm2&amp;#34; raid5.vm.provider :virtualbox do |v| if not File.exist?(disco) v.customize [&amp;#34;createhd&amp;#34;, &amp;#34;--filename&amp;#34;, disco, &amp;#34;--size&amp;#34;, 1024] end v.customize [&amp;#34;storageattach&amp;#34;, :id, &amp;#34;--storagectl&amp;#34;, &amp;#34;SATA Controller&amp;#34;, &amp;#34;--port&amp;#34;, 1, &amp;#34;--device&amp;#34;, 0, &amp;#34;--type&amp;#34;, &amp;#34;hdd&amp;#34;, &amp;#34;--medium&amp;#34;, disco] end raid5.</description>
     </item>
     
     <item>
-      <title>テーマデモ</title>
-      <link>http://alexrrblogger.surge.sh/posts/theme-demo.ja/</link>
-      <pubDate>Fri, 03 Aug 2018 00:00:00 +0000</pubDate>
+      <title>Primeros pasos de Hugo</title>
+      <link>http://alexblog.surge.sh/posts/hugo/</link>
+      <pubDate>Mon, 30 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://alexrrblogger.surge.sh/posts/theme-demo.ja/</guid>
-      <description>Style Demo h1 Heading h2 Heading h3 Heading h4 Heading h5 Heading h6 Heading This is bold text
-This is bold text
-This is italic text
-This is italic text
-Deleted text
-This is text with inline math $\sum_{n=1}^{\infty} 2^{-n} = 1$ and with math blocks:
-$$ \sum_{n=1}^{\infty} 2^{-n} = 1 $$
-   Heading Another heading     text text   text text   text text     Block quotes are written like so.</description>
+      <guid>http://alexblog.surge.sh/posts/hugo/</guid>
+      <description>Instalación de Hugo Para instalar el generador Hugo simplemente debemos ejecutar el siguiente comando en la terminal
+apt-get install hugo  Hugo utiliza el lenguaje de programación Go Hugo utiliza el sistema de plantillas Go  Para crear un sitio web solo debemos ejecutar el siguiente comando en la terminal
+hugo new site {nombre} Configuración del theme Primero debemos elegir la plantilla Go que queramos y hacemos un git clone(debemos ponerla en la carpeta themes)</description>
     </item>
     
     <item>
-      <title>Creating a New Theme</title>
-      <link>http://alexrrblogger.surge.sh/posts/creating-a-new-theme/</link>
-      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
+      <title>Ejercicio Raid 1</title>
+      <link>http://alexblog.surge.sh/posts/hugo-template-primer/</link>
+      <pubDate>Sat, 28 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://alexrrblogger.surge.sh/posts/creating-a-new-theme/</guid>
-      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
-We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
-    </item>
-    
-    <item>
-      <title>(Hu)go Template Primer</title>
-      <link>http://alexrrblogger.surge.sh/posts/hugo-template-primer/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://alexrrblogger.surge.sh/posts/hugo-template-primer/</guid>
-      <description>Hugo uses the excellent go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in go templates.
-This document is a brief primer on using go templates.</description>
-    </item>
-    
-    <item>
-      <title>Getting Started with Hugo</title>
-      <link>http://alexrrblogger.surge.sh/posts/hugoisforlovers/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://alexrrblogger.surge.sh/posts/hugoisforlovers/</guid>
-      <description>Step 1. Install Hugo Goto hugo releases and download the appropriate version for your os and architecture.
-Save it somewhere specific as we will be using it in the next step.
-More complete instructions are available at installing hugo
-Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
-Follow the following steps:
- Clone the hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:</description>
-    </item>
-    
-    <item>
-      <title>Migrate to Hugo from Jekyll</title>
-      <link>http://alexrrblogger.surge.sh/posts/migrate-from-jekyll/</link>
-      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://alexrrblogger.surge.sh/posts/migrate-from-jekyll/</guid>
-      <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
-▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png should become
-▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
+      <guid>http://alexblog.surge.sh/posts/hugo-template-primer/</guid>
+      <description>Ejercicio RAID 1  Tarea 1: Entrega un fichero Vagranfile donde definimos la máquina con los discos necesarios para hacer el ejercicio. Además al crear la máquina con vagrant se debe instalar el programa mdadm que nos permite la construcción del RAID.
+Vagrant.configure(&amp;#34;2&amp;#34;) do |config| config.vm.define :raid1 do |raid1| disco = &amp;#39;.vagrant/discoraid1.vdi&amp;#39; disco2 = &amp;#39;.vagrant/discoraid2.vdi&amp;#39; raid1.vm.box = &amp;#34;debian/buster64&amp;#34; raid1.vm.hostname = &amp;#34;EscenarioRaid&amp;#34; raid1.vm.network :public_network,:bridge=&amp;gt; &amp;#34;wlp0s20f3&amp;#34; raid1.vm.provision &amp;#34;shell&amp;#34;,run: &amp;#34;always&amp;#34;,inline: &amp;#34;apt-get update&amp;#34; raid1.</description>
     </item>
     
     <item>
       <title>About Hugo</title>
-      <link>http://alexrrblogger.surge.sh/about/</link>
+      <link>http://alexblog.surge.sh/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://alexrrblogger.surge.sh/about/</guid>
+      <guid>http://alexblog.surge.sh/about/</guid>
       <description>このテーマはhugo-coderを元に作成をしています。
 一見綺麗なポートフォリをサイトですが、より個人的なことも伝えられるようにしました。
 変更点の詳細はブログから、&amp;rdquo;FeaturesOfCoderPortfolio&amp;rdquo;を見てください。
@@ -138,46 +83,31 @@ Setup Some fun facts about Hugo:
     </item>
     
     <item>
-      <title>About Hugo</title>
-      <link>http://alexrrblogger.surge.sh/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://alexrrblogger.surge.sh/about/</guid>
-      <description>This theme is created based on hugo-coder.
-I made it possible to tell yourself more by my change.
-Please see &amp;ldquo;FeaturesOfCoderPortfolio&amp;rdquo; in the post about the change. Regarding other demo contents, it is hugo-coder&amp;rsquo;s thing.
-Have questions or suggestions? Feel free to open an issue on GitHub or ask me on Twitter.
-Hugo is a static site engine written in Go.
-It makes use of a variety of open source projects including:</description>
-    </item>
-    
-    <item>
       <title>Contact</title>
-      <link>http://alexrrblogger.surge.sh/contact/</link>
+      <link>http://alexblog.surge.sh/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://alexrrblogger.surge.sh/contact/</guid>
+      <guid>http://alexblog.surge.sh/contact/</guid>
       <description> 連絡をとりたいですか? 質問や報告などの連絡は下記からお願いします。
  open an issue on GitHub
  ask me on Twitter  </description>
     </item>
     
     <item>
-      <title>Contact</title>
-      <link>http://alexrrblogger.surge.sh/contact/</link>
+      <title>Contactame</title>
+      <link>http://alexblog.surge.sh/contactar/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://alexrrblogger.surge.sh/contact/</guid>
-      <description>Want Contact? Have questions or suggestions? Feel free to open an issue on GitHub or ask me on Twitter.
-Holaa</description>
+      <guid>http://alexblog.surge.sh/contactar/</guid>
+      <description>¿Quieres Contactarme? ¿Preguntas, sugerencias? Sientete libre de abrir un issue en GitHub.</description>
     </item>
     
     <item>
       <title>Projects</title>
-      <link>http://alexrrblogger.surge.sh/projects/</link>
+      <link>http://alexblog.surge.sh/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://alexrrblogger.surge.sh/projects/</guid>
+      <guid>http://alexblog.surge.sh/projects/</guid>
       <description> Portfolio Demo  Coder Portfolio hugo-coderを元に作成しました。
 より自分を伝えられるようにしました。
    </description>
@@ -185,13 +115,26 @@ Holaa</description>
     
     <item>
       <title>Projects</title>
-      <link>http://alexrrblogger.surge.sh/projects/</link>
+      <link>http://alexblog.surge.sh/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://alexrrblogger.surge.sh/projects/</guid>
+      <guid>http://alexblog.surge.sh/projects/</guid>
       <description> Portfolio Demo  Coder Portfolio This theme is created based on hugo-coder.
 I made it possible to tell yourself more by my change.
    </description>
+    </item>
+    
+    <item>
+      <title>Sobre Mi</title>
+      <link>http://alexblog.surge.sh/sobre/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://alexblog.surge.sh/sobre/</guid>
+      <description>Esta página ha sido creada con el tema: hugo-coder.
+Alumno de 2º de Administración de Sistemas Informáticos en Red. ¿Tienes preguntas? Pregunta en mi GitHub.
+Gracias por visitar mi página.
+Amplios conocimientos en:
+ Bases de Datos(Oracle,MongoDB,MariaDB,PostgreSQL) Sistemas Operativos(Debian y Windows) Lenguaje de programación Python Lenguajes de Marcas(Markdown,JSON,Html5)  </description>
     </item>
     
   </channel>

@@ -6,44 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="author" content="Alejandro Rodríguez">
-    <meta name="description" content="http://alexrrblogger.surge.sh">
+    <meta name="description" content="http://alexblog.surge.sh">
     <meta name="keywords" content="blog,developer,personal">
 
     <meta property="og:site_name" content="Alexblog">
     <meta property="og:title" content="
-  (Hu)go Template Primer - Alexblog
+  Ejercicio Raid 1 - Alexblog
 ">
     <meta property="og:description" content="">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="http://alexrrblogger.surge.sh/posts/hugo-template-primer/">
-    <meta property="og:image" content="http://alexrrblogger.surge.sh">
+    <meta property="og:url" content="http://alexblog.surge.sh/posts/hugo-template-primer/">
+    <meta property="og:image" content="http://alexblog.surge.sh">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="http://alexrrblogger.surge.sh/posts/hugo-template-primer/">
-    <meta name="twitter:image" content="http://alexrrblogger.surge.sh">
+    <meta name="twitter:site" content="http://alexblog.surge.sh/posts/hugo-template-primer/">
+    <meta name="twitter:image" content="http://alexblog.surge.sh">
 
-    <base href="http://alexrrblogger.surge.sh/posts/hugo-template-primer/">
+    <base href="http://alexblog.surge.sh/posts/hugo-template-primer/">
     <title>
-  (Hu)go Template Primer - Alexblog
+  Ejercicio Raid 1 - Alexblog
 </title>
 
-    <link rel="canonical" href="http://alexrrblogger.surge.sh/posts/hugo-template-primer/">
+    <link rel="canonical" href="http://alexblog.surge.sh/posts/hugo-template-primer/">
     
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     
     <link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700">
-    <link rel="stylesheet" href="http://alexrrblogger.surge.sh/css/normalize.min.css">
-    <link rel="stylesheet" href="http://alexrrblogger.surge.sh/css/style.min.css">
+    <link rel="stylesheet" href="http://alexblog.surge.sh/css/normalize.min.css">
+    <link rel="stylesheet" href="http://alexblog.surge.sh/css/style.min.css">
 
     
 
     
 
-    <link rel="icon" type="image/png" href="http://alexrrblogger.surge.sh/images/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="http://alexrrblogger.surge.sh/images/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="http://alexblog.surge.sh/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="http://alexblog.surge.sh/images/favicon-16x16.png" sizes="16x16">
 
     
-      <link rel="alternate" href="http://alexrrblogger.surge.sh/index.xml" type="application/rss+xml" title="Alexblog">
-      <link href="http://alexrrblogger.surge.sh/index.xml" rel="feed" type="application/rss+xml" title="Alexblog" />
+      <link rel="alternate" href="http://alexblog.surge.sh/index.xml" type="application/rss+xml" title="Alexblog">
+      <link href="http://alexblog.surge.sh/index.xml" rel="feed" type="application/rss+xml" title="Alexblog" />
     
 
     <meta name="generator" content="Hugo 0.57.2" />
@@ -61,15 +61,15 @@
         
           
             <li class="navigation-item  align-center ">
-              <a class="navigation-link" href="http://alexrrblogger.surge.sh/about">Sobre mí</a>
+              <a class="navigation-link" href="http://alexblog.surge.sh/sobre">Sobre mi</a>
             </li>
           
             <li class="navigation-item  align-center ">
-              <a class="navigation-link" href="http://alexrrblogger.surge.sh/posts">Blog</a>
+              <a class="navigation-link" href="http://alexblog.surge.sh/posts">Blog</a>
             </li>
           
             <li class="navigation-item  align-center ">
-              <a class="navigation-link" href="http://alexrrblogger.surge.sh/contact">Contactáctame</a>
+              <a class="navigation-link" href="http://alexblog.surge.sh/contactar">Contactame</a>
             </li>
           
         
@@ -85,266 +85,390 @@
   <section class="container post">
   <article>
     <header>
-      <h1 class="title">(Hu)go Template Primer</h1>
-      <h2 class="date">April 2, 2014</h2>
+      <h1 class="title">Ejercicio Raid 1</h1>
+      <h2 class="date">September 28, 2019</h2>
 
       
     </header>
 
     
 
-<p>Hugo uses the excellent <a href="http://golang.org/&gt;">go</a> <a href="http://golang.org/pkg/html/template/&gt;">html/template</a> library for
-its template engine. It is an extremely lightweight engine that provides a very
-small amount of logic. In our experience that it is just the right amount of
-logic to be able to create a good static website. If you have used other
-template systems from different languages or frameworks you will find a lot of
-similarities in go templates.</p>
-
-<p>This document is a brief primer on using go templates. The <a href="http://golang.org/pkg/html/template/&gt;">go docs</a>
-provide more details.</p>
-
-<h2 id="introduction-to-go-templates">Introduction to Go Templates</h2>
-
-<p>Go templates provide an extremely simple template language. It adheres to the
-belief that only the most basic of logic belongs in the template or view layer.
-One consequence of this simplicity is that go templates parse very quickly.</p>
-
-<p>A unique characteristic of go templates is they are content aware. Variables and
-content will be sanitized depending on the context of where they are used. More
-details can be found in the <a href="http://golang.org/pkg/html/template/&gt;">go docs</a>.</p>
-
-<h2 id="basic-syntax">Basic Syntax</h2>
-
-<p>Go lang templates are html files with the addition of variables and
-functions.</p>
-
-<p><strong>Go variables and functions are accessible within {{ }}</strong></p>
-
-<p>Accessing a predefined variable &ldquo;foo&rdquo;:</p>
-<div class="highlight"><pre class="chroma">{{ foo }}</pre></div>
-<p><strong>Parameters are separated using spaces</strong></p>
-
-<p>Calling the add function with input of 1, 2:</p>
-<div class="highlight"><pre class="chroma">{{ add 1 2 }}</pre></div>
-<p><strong>Methods and fields are accessed via dot notation</strong></p>
-
-<p>Accessing the Page Parameter &ldquo;bar&rdquo;</p>
-<div class="highlight"><pre class="chroma">{{ .Params.bar }}</pre></div>
-<p><strong>Parentheses can be used to group items together</strong></p>
-<div class="highlight"><pre class="chroma">{{ if or (isset .Params &#34;alt&#34;) (isset .Params &#34;caption&#34;) }} Caption {{ end }}</pre></div>
-<h2 id="variables">Variables</h2>
-
-<p>Each go template has a struct (object) made available to it. In hugo each
-template is passed either a page or a node struct depending on which type of
-page you are rendering. More details are available on the
-<a href="/layout/variables">variables</a> page.</p>
-
-<p>A variable is accessed by referencing the variable name.</p>
-<div class="highlight"><pre class="chroma">&lt;title&gt;{{ .Title }}&lt;/title&gt;</pre></div>
-<p>Variables can also be defined and referenced.</p>
-<div class="highlight"><pre class="chroma">{{ $address := &#34;123 Main St.&#34;}}
-{{ $address }}</pre></div>
-<h2 id="functions">Functions</h2>
-
-<p>Go template ship with a few functions which provide basic functionality. The go
-template system also provides a mechanism for applications to extend the
-available functions with their own. <a href="/layout/functions">Hugo template
-functions</a> provide some additional functionality we believe
-are useful for building websites. Functions are called by using their name
-followed by the required parameters separated by spaces. Template
-functions cannot be added without recompiling hugo.</p>
-
-<p><strong>Example:</strong></p>
-<div class="highlight"><pre class="chroma">{{ add 1 2 }}</pre></div>
-<h2 id="includes">Includes</h2>
-
-<p>When including another template you will pass to it the data it will be
-able to access. To pass along the current context please remember to
-include a trailing dot. The templates location will always be starting at
-the /layout/ directory within Hugo.</p>
-
-<p><strong>Example:</strong></p>
-<div class="highlight"><pre class="chroma">{{ template &#34;chrome/header.html&#34; . }}</pre></div>
-<h2 id="logic">Logic</h2>
-
-<p>Go templates provide the most basic iteration and conditional logic.</p>
-
-<h3 id="iteration">Iteration</h3>
-
-<p>Just like in go, the go templates make heavy use of range to iterate over
-a map, array or slice. The following are different examples of how to use
-range.</p>
-
-<p><strong>Example 1: Using Context</strong></p>
-<div class="highlight"><pre class="chroma">{{ range array }}
-    {{ . }}
-{{ end }}</pre></div>
-<p><strong>Example 2: Declaring value variable name</strong></p>
-<div class="highlight"><pre class="chroma">{{range $element := array}}
-    {{ $element }}
-{{ end }}</pre></div>
-<p><strong>Example 2: Declaring key and value variable name</strong></p>
-<div class="highlight"><pre class="chroma">{{range $index, $element := array}}
-    {{ $index }}
-    {{ $element }}
-{{ end }}</pre></div>
-<h3 id="conditionals">Conditionals</h3>
-
-<p>If, else, with, or, &amp; and provide the framework for handling conditional
-logic in Go Templates. Like range, each statement is closed with <code>end</code>.</p>
-
-<p>Go Templates treat the following values as false:</p>
+<h2 id="ejercicio-raid-1"><em>Ejercicio RAID 1</em></h2>
 
 <ul>
-<li>false</li>
-<li>0</li>
-<li>any array, slice, map, or string of length zero</li>
+<li><p><em>Tarea</em> 1: Entrega un fichero Vagranfile donde definimos la máquina con los discos necesarios para hacer el ejercicio. Además al crear la máquina con vagrant se debe instalar el programa mdadm que nos permite la construcción del RAID.</p>
+<div class="highlight"><pre class="chroma">Vagrant.configure(&#34;2&#34;) do |config|
+
+config.vm.define :raid1 do |raid1|
+
+disco = &#39;.vagrant/discoraid1.vdi&#39;
+
+disco2 = &#39;.vagrant/discoraid2.vdi&#39;
+
+raid1.vm.box = &#34;debian/buster64&#34;
+
+raid1.vm.hostname = &#34;EscenarioRaid&#34;
+
+raid1.vm.network :public_network,:bridge=&gt; &#34;wlp0s20f3&#34;
+
+raid1.vm.provision &#34;shell&#34;,run: &#34;always&#34;,inline: &#34;apt-get update&#34;
+
+raid1.vm.provision &#34;shell&#34;,run: &#34;always&#34;,inline: &#34;apt-get -y upgrade&#34;
+
+raid1.vm.provision &#34;shell&#34;,run: &#34;always&#34;,inline: &#34;apt-get -y install mdadm&#34;
+
+raid1.vm.provider :virtualbox do |v|
+
+	if not File.exist?(disco)
+
+             v.customize [&#34;createhd&#34;, &#34;--filename&#34;, disco, &#34;--size&#34;, 1024]
+
+	end
+
+             v.customize [&#34;storageattach&#34;, :id, &#34;--storagectl&#34;, &#34;SATA Controller&#34;,
+
+                          &#34;--port&#34;, 1, &#34;--device&#34;, 0, &#34;--type&#34;, &#34;hdd&#34;,
+
+                          &#34;--medium&#34;, disco]
+
+       
+
+ end
+
+ raid1.vm.provider :virtualbox do |v|
+
+         if not File.exist?(disco2)
+
+             v.customize [&#34;createhd&#34;, &#34;--filename&#34;, disco2, &#34;--size&#34;, 1024]
+
+	     end
+
+             v.customize [&#34;storageattach&#34;, :id, &#34;--storagectl&#34;, &#34;SATA Controller&#34;,
+
+                          &#34;--port&#34;, 2, &#34;--device&#34;, 0, &#34;--type&#34;, &#34;hdd&#34;,
+
+                          &#34;--medium&#34;, disco2]
+
+ end
+
+end
+
+end</pre></div></li>
+
+<li><p><em>Tarea</em> 2: Crea una raid llamado md1 con los dos discos que hemos conectado a la máquina.
+Para hacer el raid 1 sólo debemos ejecutar el siguiente comando:</p>
+<div class="highlight"><pre class="chroma">mdadm --create /dev/md1 --level=1 --raid-devices=2 /dev/sdb /dev/sdc</pre></div>
+<p>Salida de lsblk -f</p>
+<div class="highlight"><pre class="chroma">NAME   FSTYPE            LABEL           UUID                                 FSAVAIL FSUSE% MOUNTPOINT
+sda                                                                                          
+├─sda1 ext4                              b9ffc3d1-86b2-4a2c-a8be-f2b2f4aa4cb5   16.3G     6% /
+├─sda2                                                                                       
+└─sda5 swap                              f8f6d279-1b63-4310-a668-cb468c9091d8                [SWAP]
+sdb    linux_raid_member EscenarioRaid:1 30ea5d9b-3dd5-d647-ab99-ca08b46e3a30                
+└─md1                                                                                        
+sdc    linux_raid_member EscenarioRaid:1 30ea5d9b-3dd5-d647-ab99-ca08b46e3a30                
+└─md1                      </pre></div></li>
+
+<li><p><em>Tarea</em> 3: Comprueba las características del RAID. Comprueba el estado del RAID. ¿Qué capacidad tiene el RAID que hemos creado?
+Para comprobar las caracteristicas del RAID ejecutamos el comando</p>
+<div class="highlight"><pre class="chroma">mdadm --detail /dev/md1</pre></div><div class="highlight"><pre class="chroma">/dev/md1:
+       Version : 1.2
+ Creation Time : Mon Sep 30 08:47:02 2019
+    Raid Level : raid1
+    Array Size : 1046528 (1022.00 MiB 1071.64 MB)
+ Used Dev Size : 1046528 (1022.00 MiB 1071.64 MB)
+  Raid Devices : 2
+ Total Devices : 2
+   Persistence : Superblock is persistent
+
+   Update Time : Mon Sep 30 08:47:07 2019
+         State : clean 
+Active Devices : 2
+Working Devices : 2
+Failed Devices : 0
+ Spare Devices : 0
+
+Consistency Policy : resync
+
+          Name : EscenarioRaid:1  (local to host EscenarioRaid)
+          UUID : 30ea5d9b:3dd5d647:ab99ca08:b46e3a30
+        Events : 17
+
+Number   Major   Minor   RaidDevice State
+   0       8       16        0      active sync   /dev/sdb
+   1       8       32        1      active sync   /dev/sdc</pre></div></li>
 </ul>
 
-<p><strong>Example 1: If</strong></p>
-<div class="highlight"><pre class="chroma">{{ if isset .Params &#34;title&#34; }}&lt;h4&gt;{{ index .Params &#34;title&#34; }}&lt;/h4&gt;{{ end }}</pre></div>
-<p><strong>Example 2: If -&gt; Else</strong></p>
-<div class="highlight"><pre class="chroma">{{ if isset .Params &#34;alt&#34; }}
-    {{ index .Params &#34;alt&#34; }}
-{{else}}
-    {{ index .Params &#34;caption&#34; }}
-{{ end }}</pre></div>
-<p><strong>Example 3: And &amp; Or</strong></p>
-<div class="highlight"><pre class="chroma">{{ if and (or (isset .Params &#34;title&#34;) (isset .Params &#34;caption&#34;)) (isset .Params &#34;attr&#34;)}}</pre></div>
-<p><strong>Example 4: With</strong></p>
+<p>Para mirar el estado del RAID</p>
+<div class="highlight"><pre class="chroma">cat /proc/mdstat</pre></div><div class="highlight"><pre class="chroma">Personalities : [raid1] 
+md1 : active raid1 sdc[1] sdb[0]
+      1046528 blocks super 1.2 [2/2] [UU]
+      
+unused devices: &lt;none&gt;</pre></div>
+<p>Podemos ver que la RAID está activa y ocupa 1GB de espacio</p>
 
-<p>An alternative way of writing &ldquo;if&rdquo; and then referencing the same value
-is to use &ldquo;with&rdquo; instead. With rebinds the context <code>.</code> within its scope,
-and skips the block if the variable is absent.</p>
+<ul>
+<li><p><em>Tarea</em> 4: Crea una partición primaria de 500Mb en el raid1.</p>
+<div class="highlight"><pre class="chroma">fdisk /dev/md1
 
-<p>The first example above could be simplified as:</p>
-<div class="highlight"><pre class="chroma">{{ with .Params.title }}&lt;h4&gt;{{ . }}&lt;/h4&gt;{{ end }}</pre></div>
-<p><strong>Example 5: If -&gt; Else If</strong></p>
-<div class="highlight"><pre class="chroma">{{ if isset .Params &#34;alt&#34; }}
-    {{ index .Params &#34;alt&#34; }}
-{{ else if isset .Params &#34;caption&#34; }}
-    {{ index .Params &#34;caption&#34; }}
-{{ end }}</pre></div>
-<h2 id="pipes">Pipes</h2>
+Command (m for help): n
+Partition type
+p   primary (0 primary, 0 extended, 4 free)
+e   extended (container for logical partitions)
+Select (default p): p
+Partition number (1-4, default 1): 
+First sector (2048-2093055, default 2048): 
+Last sector, +/-sectors or +/-size{K,M,G,T,P} (2048-2093055, default 2093055): +500M
 
-<p>One of the most powerful components of go templates is the ability to
-stack actions one after another. This is done by using pipes. Borrowed
-from unix pipes, the concept is simple, each pipeline&rsquo;s output becomes the
-input of the following pipe.</p>
+Created a new partition 1 of type &#39;Linux&#39; and of size 500 MiB.
 
-<p>Because of the very simple syntax of go templates, the pipe is essential
-to being able to chain together function calls. One limitation of the
-pipes is that they only can work with a single value and that value
-becomes the last parameter of the next pipeline.</p>
+Command (m for help): w
+The partition table has been altered.
+Calling ioctl() to re-read partition table.
+Syncing disks.</pre></div></li>
 
-<p>A few simple examples should help convey how to use the pipe.</p>
+<li><p><em>Tarea</em> 5: Formatea esa partición con un sistema de archivo ext3.</p>
+<div class="highlight"><pre class="chroma">mkfs.ext3 /dev/md1p1 -L &#34;Raid Particion 1&#34;
 
-<p><strong>Example 1 :</strong></p>
-<div class="highlight"><pre class="chroma">{{ if eq 1 1 }} Same {{ end }}</pre></div>
-<p>is the same as</p>
-<div class="highlight"><pre class="chroma">{{ eq 1 1 | if }} Same {{ end }}</pre></div>
-<p>It does look odd to place the if at the end, but it does provide a good
-illustration of how to use the pipes.</p>
+mke2fs 1.44.5 (15-Dec-2018)
+Creating filesystem with 512000 1k blocks and 128016 inodes
+Filesystem UUID: a5048d2d-571f-4957-932d-e0de57b7a473
+Superblock backups stored on blocks: 
+	8193, 24577, 40961, 57345, 73729, 204801, 221185, 401409
 
-<p><strong>Example 2 :</strong></p>
-<div class="highlight"><pre class="chroma">{{ index .Params &#34;disqus_url&#34; | html }}</pre></div>
-<p>Access the page parameter called &ldquo;disqus_url&rdquo; and escape the HTML.</p>
+Allocating group tables: done                            
+Writing inode tables: done                            
+Creating journal (8192 blocks): done
+Writing superblocks and filesystem accounting information: done</pre></div></li>
 
-<p><strong>Example 3 :</strong></p>
-<div class="highlight"><pre class="chroma">{{ if or (or (isset .Params &#34;title&#34;) (isset .Params &#34;caption&#34;)) (isset .Params &#34;attr&#34;)}}
-Stuff Here
-{{ end }}</pre></div>
-<p>Could be rewritten as</p>
-<div class="highlight"><pre class="chroma">{{  isset .Params &#34;caption&#34; | or isset .Params &#34;title&#34; | or isset .Params &#34;attr&#34; | if }}
-Stuff Here
-{{ end }}</pre></div>
-<h2 id="context-aka-the-dot">Context (aka. the dot)</h2>
+<li><p><em>Tarea</em> 6: Monta la partición en el directorio /mnt/raid0 y crea un fichero. ¿Qué tendríamos que hacer para que este punto de montaje sea permanente?</p>
+<div class="highlight"><pre class="chroma">mkdir /mnt/raid1
+mount /dev/md1p1 /mnt/raid1</pre></div><div class="highlight"><pre class="chroma">lsblk -f
 
-<p>The most easily overlooked concept to understand about go templates is that {{ . }}
-always refers to the current context. In the top level of your template this
-will be the data set made available to it. Inside of a iteration it will have
-the value of the current item. When inside of a loop the context has changed. .
-will no longer refer to the data available to the entire page. If you need to
-access this from within the loop you will likely want to set it to a variable
-instead of depending on the context.</p>
+NAME      FSTYPE            LABEL            UUID                                 FSAVAIL FSUSE% MOUNTPOINT
+sda                                                                                              
+├─sda1    ext4                               b9ffc3d1-86b2-4a2c-a8be-f2b2f4aa4cb5   16.3G     6% /
+├─sda2                                                                                           
+└─sda5    swap                               f8f6d279-1b63-4310-a668-cb468c9091d8                [SWAP]
+sdb       linux_raid_member EscenarioRaid:1  30ea5d9b-3dd5-d647-ab99-ca08b46e3a30                
+└─md1                                                                                            
+└─md1p1 ext3              Raid Particion 1 53ebbd0f-90d5-4856-9505-f6297db0b7b3  448.9M     0% /mnt/raid1
+sdc       linux_raid_member EscenarioRaid:1  30ea5d9b-3dd5-d647-ab99-ca08b46e3a30                
+└─md1                                                                                            
+└─md1p1 ext3              Raid Particion 1 53ebbd0f-90d5-4856-9505-f6297db0b7b3  448.9M     0% /mnt/raid1</pre></div></li>
+</ul>
 
-<p><strong>Example:</strong></p>
-<div class="highlight"><pre class="chroma">  {{ $title := .Site.Title }}
-  {{ range .Params.tags }}
-    &lt;li&gt; &lt;a href=&#34;{{ $baseurl }}/tags/{{ . | urlize }}&#34;&gt;{{ . }}&lt;/a&gt; - {{ $title }} &lt;/li&gt;
-  {{ end }}</pre></div>
-<p>Notice how once we have entered the loop the value of {{ . }} has changed. We
-have defined a variable outside of the loop so we have access to it from within
-the loop.</p>
+<p>Para que el punto de montaje sea permanente debemos poner la siguiente linea en /etc/fstab</p>
+<div class="highlight"><pre class="chroma">/dev/md1p1      /mnt/raid1      ext3    defaults        0       2</pre></div>
+<p>Para crear el fichero solo hacemos dentro de /mnt/raid1:</p>
+<div class="highlight"><pre class="chroma">root@EscenarioRaid:/mnt/raid1# echo &#34;Hola&#34; &gt; prueba.txt</pre></div>
+<ul>
+<li><em>Tarea</em> 7: Simula que un disco se estropea. Muestra el estado del raid para comprobar que un disco falla. ¿Podemos acceder al fichero?</li>
+</ul>
 
-<h1 id="hugo-parameters">Hugo Parameters</h1>
+<p>Para simular que un disco se estropea usamos el comando:</p>
+<div class="highlight"><pre class="chroma">mdadm -f /dev/md1 /dev/sdc</pre></div>
+<p>Mostramos que el disco está fallando:</p>
+<div class="highlight"><pre class="chroma">/dev/md1:
+           Version : 1.2
+     Creation Time : Mon Sep 30 08:47:02 2019
+        Raid Level : raid1
+        Array Size : 1046528 (1022.00 MiB 1071.64 MB)
+     Used Dev Size : 1046528 (1022.00 MiB 1071.64 MB)
+      Raid Devices : 2
+     Total Devices : 2
+       Persistence : Superblock is persistent
 
-<p>Hugo provides the option of passing values to the template language
-through the site configuration (for sitewide values), or through the meta
-data of each specific piece of content. You can define any values of any
-type (supported by your front matter/config format) and use them however
-you want to inside of your templates.</p>
+       Update Time : Mon Sep 30 08:52:03 2019
+             State : clean, degraded 
+    Active Devices : 1
+   Working Devices : 1
+    Failed Devices : 1
+     Spare Devices : 0
 
-<h2 id="using-content-page-parameters">Using Content (page) Parameters</h2>
+Consistency Policy : resync
 
-<p>In each piece of content you can provide variables to be used by the
-templates. This happens in the <a href="/content/front-matter">front matter</a>.</p>
+              Name : EscenarioRaid:1  (local to host EscenarioRaid)
+              UUID : 30ea5d9b:3dd5d647:ab99ca08:b46e3a30
+            Events : 21
 
-<p>An example of this is used in this documentation site. Most of the pages
-benefit from having the table of contents provided. Sometimes the TOC just
-doesn&rsquo;t make a lot of sense. We&rsquo;ve defined a variable in our front matter
-of some pages to turn off the TOC from being displayed.</p>
+    Number   Major   Minor   RaidDevice State
+       0       8       16        0      active sync   /dev/sdb
+       -       0        0        1      removed
 
-<p>Here is the example front matter:</p>
-<div class="highlight"><pre class="chroma">---
-title: &#34;Permalinks&#34;
-date: &#34;2013-11-18&#34;
-aliases:
-  - &#34;/doc/permalinks/&#34;
-groups: [&#34;extras&#34;]
-groups_weight: 30
-notoc: true
----</pre></div>
-<p>Here is the corresponding code inside of the template:</p>
-<div class="highlight"><pre class="chroma">  {{ if not .Params.notoc }}
-    &lt;div id=&#34;toc&#34; class=&#34;well col-md-4 col-sm-6&#34;&gt;
-    {{ .TableOfContents }}
-    &lt;/div&gt;
-  {{ end }}</pre></div>
-<h2 id="using-site-config-parameters">Using Site (config) Parameters</h2>
+       1       8       32        -      faulty   /dev/sdc</pre></div>
+<p>Comprobamos si podemos acceder al fichero</p>
+<div class="highlight"><pre class="chroma">root@EscenarioRaid:/mnt/raid1# cat prueba.txt 
+Hola</pre></div>
+<p>Esto es debido a que la propiedad del raid1 es que en ambos discos se clona toda la informacin</p>
 
-<p>In your top-level configuration file (eg, <code>config.yaml</code>) you can define site
-parameters, which are values which will be available to you in chrome.</p>
+<ul>
+<li><em>Tarea</em> 8: Recupera el estado del raid y comprueba si podemos acceder al fichero.</li>
+</ul>
 
-<p>For instance, you might declare:</p>
-<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml">params<span class="p">:</span><span class="w">
-</span><span class="w">  </span>CopyrightHTML<span class="p">:</span><span class="w"> </span><span class="s2">&#34;Copyright &amp;#xA9; 2013 John Doe. All Rights Reserved.&#34;</span><span class="w">
-</span><span class="w">  </span>TwitterUser<span class="p">:</span><span class="w"> </span><span class="s2">&#34;spf13&#34;</span><span class="w">
-</span><span class="w">  </span>SidebarRecentLimit<span class="p">:</span><span class="w"> </span><span class="m">5</span></code></pre></div>
-<p>Within a footer layout, you might then declare a <code>&lt;footer&gt;</code> which is only
-provided if the <code>CopyrightHTML</code> parameter is provided, and if it is given,
-you would declare it to be HTML-safe, so that the HTML entity is not escaped
-again.  This would let you easily update just your top-level config file each
-January 1st, instead of hunting through your templates.</p>
-<div class="highlight"><pre class="chroma">{{if .Site.Params.CopyrightHTML}}&lt;footer&gt;
-&lt;div class=&#34;text-center&#34;&gt;{{.Site.Params.CopyrightHTML | safeHtml}}&lt;/div&gt;
-&lt;/footer&gt;{{end}}</pre></div>
-<p>An alternative way of writing the &ldquo;if&rdquo; and then referencing the same value
-is to use &ldquo;with&rdquo; instead. With rebinds the context <code>.</code> within its scope,
-and skips the block if the variable is absent:</p>
-<div class="highlight"><pre class="chroma">{{with .Site.Params.TwitterUser}}&lt;span class=&#34;twitter&#34;&gt;
-&lt;a href=&#34;https://twitter.com/{{.}}&#34; rel=&#34;author&#34;&gt;
-&lt;img src=&#34;/images/twitter.png&#34; width=&#34;48&#34; height=&#34;48&#34; title=&#34;Twitter: {{.}}&#34;
- alt=&#34;Twitter&#34;&gt;&lt;/a&gt;
-&lt;/span&gt;{{end}}</pre></div>
-<p>Finally, if you want to pull &ldquo;magic constants&rdquo; out of your layouts, you can do
-so, such as in this example:</p>
-<div class="highlight"><pre class="chroma">&lt;nav class=&#34;recent&#34;&gt;
-  &lt;h1&gt;Recent Posts&lt;/h1&gt;
-  &lt;ul&gt;{{range first .Site.Params.SidebarRecentLimit .Site.Recent}}
-    &lt;li&gt;&lt;a href=&#34;{{.RelPermalink}}&#34;&gt;{{.Title}}&lt;/a&gt;&lt;/li&gt;
-  {{end}}&lt;/ul&gt;
-&lt;/nav&gt;</pre></div>
+<p>Para recuperar el estado del raid hacemos el siguiente comando:</p>
+<div class="highlight"><pre class="chroma">mdadm --re-add /dev/md1 /dev/sdc</pre></div>
+<p>Y comprobamos que está añadido</p>
+<div class="highlight"><pre class="chroma">/dev/md1:
+           Version : 1.2
+     Creation Time : Mon Sep 30 08:47:02 2019
+        Raid Level : raid1
+        Array Size : 1046528 (1022.00 MiB 1071.64 MB)
+     Used Dev Size : 1046528 (1022.00 MiB 1071.64 MB)
+      Raid Devices : 2
+     Total Devices : 2
+       Persistence : Superblock is persistent
+
+       Update Time : Mon Sep 30 09:04:12 2019
+             State : clean 
+    Active Devices : 2
+   Working Devices : 2
+    Failed Devices : 0
+     Spare Devices : 0
+
+Consistency Policy : resync
+
+              Name : EscenarioRaid:1  (local to host EscenarioRaid)
+              UUID : 30ea5d9b:3dd5d647:ab99ca08:b46e3a30
+            Events : 25
+
+    Number   Major   Minor   RaidDevice State
+       0       8       16        0      active sync   /dev/sdb
+       1       8       32        1      active sync   /dev/sdc</pre></div>
+<p>Y comprobamos que la información del fichero sigue activa</p>
+<div class="highlight"><pre class="chroma">root@EscenarioRaid:/mnt/raid1# cat prueba.txt 
+Hola</pre></div>
+<ul>
+<li><em>Tarea</em> 9: ¿Se puede añadir un nuevo disco al raid 0?. Compruebalo.</li>
+</ul>
+
+<p>Añadimos un nuevo disco de 1gb y lo añadimos a la raid md1.</p>
+<div class="highlight"><pre class="chroma">mdadm --add /dev/md1 /dev/sdd </pre></div><div class="highlight"><pre class="chroma">/dev/md1:
+           Version : 1.2
+     Creation Time : Mon Sep 30 10:22:03 2019
+        Raid Level : raid1
+        Array Size : 1046528 (1022.00 MiB 1071.64 MB)
+     Used Dev Size : 1046528 (1022.00 MiB 1071.64 MB)
+      Raid Devices : 2
+     Total Devices : 3
+       Persistence : Superblock is persistent
+
+       Update Time : Mon Sep 30 10:24:46 2019
+             State : clean 
+    Active Devices : 2
+   Working Devices : 3
+    Failed Devices : 0
+     Spare Devices : 1
+
+Consistency Policy : resync
+
+              Name : EscenarioRaid:1  (local to host EscenarioRaid)
+              UUID : 32fa2884:af75e4ca:bbeda0d1:3a4edc7d
+            Events : 18
+
+    Number   Major   Minor   RaidDevice State
+       0       8       16        0      active sync   /dev/sdb
+       1       8       32        1      active sync   /dev/sdc
+
+       2       8       48        -      spare   /dev/sdd</pre></div>
+<p>Lo que pasa es que al añadir un disco, se nos pone de reserva, ya que al crear el raid hemos puesto que solo hayan 2 dispositivos activos, en cuanto uno de los discos falle, este se sustituirá automáticamente</p>
+<div class="highlight"><pre class="chroma">mdadm -f /dev/md1 /dev/sdc</pre></div><div class="highlight"><pre class="chroma">/dev/md1:
+           Version : 1.2
+     Creation Time : Mon Sep 30 10:22:03 2019
+        Raid Level : raid1
+        Array Size : 1046528 (1022.00 MiB 1071.64 MB)
+     Used Dev Size : 1046528 (1022.00 MiB 1071.64 MB)
+      Raid Devices : 2
+     Total Devices : 3
+       Persistence : Superblock is persistent
+
+       Update Time : Mon Sep 30 10:31:40 2019
+             State : clean 
+    Active Devices : 2
+   Working Devices : 2
+    Failed Devices : 1
+     Spare Devices : 0
+
+Consistency Policy : resync
+
+              Name : EscenarioRaid:1  (local to host EscenarioRaid)
+              UUID : 32fa2884:af75e4ca:bbeda0d1:3a4edc7d
+            Events : 37
+
+    Number   Major   Minor   RaidDevice State
+       0       8       16        0      active sync   /dev/sdb
+       2       8       48        1      active sync   /dev/sdd
+
+       1       8       32        -      faulty   /dev/sdc</pre></div>
+<ul>
+<li><em>Tarea</em> 10: Redimensiona la partición y el sistema de archivo de 500Mb al tamaño del raid.</li>
+
+<li><p>Hacemos un nuevo fdisk del raid para poner la partición al máximo</p>
+<div class="highlight"><pre class="chroma">root@EscenarioRaid:/mnt/raid1# fdisk /dev/md1
+
+Welcome to fdisk (util-linux 2.33.1).
+Changes will remain in memory only, until you decide to write them.
+Be careful before using the write command.
+
+
+Command (m for help): n
+Partition type
+p   primary (1 primary, 0 extended, 3 free)
+e   extended (container for logical partitions)
+Select (default p): 
+
+Using default response p.
+Partition number (2-4, default 2): ^C
+Command (m for help): d
+
+Selected partition 1
+Partition 1 has been deleted.
+
+Command (m for help): n
+Partition type
+p   primary (0 primary, 0 extended, 4 free)
+e   extended (container for logical partitions)
+Select (default p): 
+
+Using default response p.
+Partition number (1-4, default 1): 
+First sector (2048-2093055, default 2048): 
+Last sector, +/-sectors or +/-size{K,M,G,T,P} (2048-2093055, default 2093055): 
+
+Created a new partition 1 of type &#39;Linux&#39; and of size 1021 MiB.
+Partition #1 contains a ext3 signature.
+
+Do you want to remove the signature? [Y]es/[N]o: n
+
+Command (m for help): w
+
+The partition table has been altered.
+Syncing disks.</pre></div></li>
+</ul>
+
+<p>Y para modificar el sistema de ficheros usamos el comando</p>
+<div class="highlight"><pre class="chroma">umount /mnt/raid1
+
+e2fsck -f /dev/md1p1
+resize2fs /dev/md1p1</pre></div>
+<p>Lo montamos y observamos que ha cambiado el sistema de ficheros</p>
+<div class="highlight"><pre class="chroma">NAME      FSTYPE            LABEL            UUID                                 FSAVAIL FSUSE% MOUNTPOINT
+sda                                                                                              
+├─sda1    ext4                               b9ffc3d1-86b2-4a2c-a8be-f2b2f4aa4cb5   16.3G     6% /
+├─sda2                                                                                           
+└─sda5    swap                               f8f6d279-1b63-4310-a668-cb468c9091d8                [SWAP]
+sdb       linux_raid_member EscenarioRaid:1  32fa2884-af75-e4ca-bbed-a0d13a4edc7d                
+└─md1                                                                                            
+  └─md1p1 ext3              Raid Particion 1 6e7793b3-a379-4988-836e-c2d43b29d5be  927.1M     0% /mnt/raid1
+sdc       linux_raid_member EscenarioRaid:1  32fa2884-af75-e4ca-bbed-a0d13a4edc7d                
+└─md1                                                                                            
+  └─md1p1 ext3              Raid Particion 1 6e7793b3-a379-4988-836e-c2d43b29d5be  927.1M     0% /mnt/raid1
+sdd       linux_raid_member EscenarioRaid:1  32fa2884-af75-e4ca-bbed-a0d13a4edc7d                
+└─md1                                                                                            
+  └─md1p1 ext3              Raid Particion 1 6e7793b3-a379-4988-836e-c2d43b29d5be  927.1M     0% /mnt/raid1
+
+root@EscenarioRaid:/mnt/raid1# ls
+lost+found  prueba.txt</pre></div>
   </article>
 
   <br/>
@@ -382,19 +506,19 @@ so, such as in this example:</p>
       <div class="sns-shares sp-sns-shares">
         
         
-          <a class="fb btn sns-share fb-share" href="http://www.facebook.com/share.php?u=http%3a%2f%2falexrrblogger.surge.sh%2fposts%2fhugo-template-primer%2f" onclick="window.open(this.href, 'FBwindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fab fa-facebook-f"></i></a>
+          <a class="fb btn sns-share fb-share" href="http://www.facebook.com/share.php?u=http%3a%2f%2falexblog.surge.sh%2fposts%2fhugo-template-primer%2f" onclick="window.open(this.href, 'FBwindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fab fa-facebook-f"></i></a>
         
         
         
         
-          <a class="sns-share linkedIn-share" href="https://www.linkedin.com/sharing/share-offsite/?url=http%3a%2f%2falexrrblogger.surge.sh%2fposts%2fhugo-template-primer%2f"><i class="fab fa-linkedin"></i></a>
+          <a class="sns-share linkedIn-share" href="https://www.linkedin.com/sharing/share-offsite/?url=http%3a%2f%2falexblog.surge.sh%2fposts%2fhugo-template-primer%2f"><i class="fab fa-linkedin"></i></a>
         
       </div>
     
     
       <p>Enter a text here.</p>
     
-     © 2018    ·  Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/naro143/hugo-coder-portfolio">CoderPortfolio</a>. 
+     © 2019    ·  Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/naro143/hugo-coder-portfolio">CoderPortfolio</a>. 
 
   </section>
 </footer>
@@ -407,12 +531,12 @@ so, such as in this example:</p>
       <div class="sns-shares pc-sns-shares">
         
         
-          <a class="fb btn sns-share fb-share" href="http://www.facebook.com/share.php?u=http%3a%2f%2falexrrblogger.surge.sh%2fposts%2fhugo-template-primer%2f" onclick="window.open(this.href, 'FBwindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fab fa-facebook-f"></i></a>
+          <a class="fb btn sns-share fb-share" href="http://www.facebook.com/share.php?u=http%3a%2f%2falexblog.surge.sh%2fposts%2fhugo-template-primer%2f" onclick="window.open(this.href, 'FBwindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fab fa-facebook-f"></i></a>
         
         
         
         
-          <a class="sns-share linkedIn-share" href="https://www.linkedin.com/sharing/share-offsite/?url=http%3a%2f%2falexrrblogger.surge.sh%2fposts%2fhugo-template-primer%2f"><i class="fab fa-linkedin"></i></a>
+          <a class="sns-share linkedIn-share" href="https://www.linkedin.com/sharing/share-offsite/?url=http%3a%2f%2falexblog.surge.sh%2fposts%2fhugo-template-primer%2f"><i class="fab fa-linkedin"></i></a>
         
       </div>
     
@@ -424,7 +548,7 @@ so, such as in this example:</p>
 
     
 
-  <script src="http://alexrrblogger.surge.sh/js/app.js"></script>
+  <script src="http://alexblog.surge.sh/js/app.js"></script>
   
   <script>
   (function($) {
