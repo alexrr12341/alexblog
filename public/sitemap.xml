@@ -3,15 +3,127 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://example.org/categories/</loc>
+    <loc>http://alexrrblogger.surge.sh/</loc>
+    <lastmod>2018-08-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/</loc>
+    <loc>http://alexrrblogger.surge.sh/posts/featuresofcoderportfolio.ja/</loc>
+    <lastmod>2018-08-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/tags/</loc>
+    <loc>http://alexrrblogger.surge.sh/posts/featuresofcoderportfolio/</loc>
+    <lastmod>2018-08-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://alexrrblogger.surge.sh/posts/</loc>
+    <lastmod>2018-08-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://alexrrblogger.surge.sh/posts/theme-demo/</loc>
+    <lastmod>2018-08-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://alexrrblogger.surge.sh/posts/theme-demo.ja/</loc>
+    <lastmod>2018-08-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://alexrrblogger.surge.sh/posts/creating-a-new-theme/</loc>
+    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://alexrrblogger.surge.sh/posts/hugo-template-primer/</loc>
+    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://alexrrblogger.surge.sh/categories/</loc>
+    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://alexrrblogger.surge.sh/categories/development/</loc>
+    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://alexrrblogger.surge.sh/tags/development/</loc>
+    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://alexrrblogger.surge.sh/posts/hugoisforlovers/</loc>
+    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://alexrrblogger.surge.sh/tags/go/</loc>
+    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://alexrrblogger.surge.sh/categories/golang/</loc>
+    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://alexrrblogger.surge.sh/tags/golang/</loc>
+    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://alexrrblogger.surge.sh/tags/hugo/</loc>
+    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://alexrrblogger.surge.sh/tags/</loc>
+    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://alexrrblogger.surge.sh/tags/templates/</loc>
+    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://alexrrblogger.surge.sh/tags/themes/</loc>
+    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://alexrrblogger.surge.sh/posts/migrate-from-jekyll/</loc>
+    <lastmod>2014-03-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://alexrrblogger.surge.sh/about/</loc>
+  </url>
+  
+  <url>
+    <loc>http://alexrrblogger.surge.sh/about/</loc>
+  </url>
+  
+  <url>
+    <loc>http://alexrrblogger.surge.sh/contact/</loc>
+  </url>
+  
+  <url>
+    <loc>http://alexrrblogger.surge.sh/contact/</loc>
+  </url>
+  
+  <url>
+    <loc>http://alexrrblogger.surge.sh/projects/</loc>
+  </url>
+  
+  <url>
+    <loc>http://alexrrblogger.surge.sh/projects/</loc>
   </url>
   
 </urlset>
