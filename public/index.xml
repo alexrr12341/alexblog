@@ -47,7 +47,7 @@ Vagrant.configure(&amp;#34;2&amp;#34;) do |config| config.vm.define :raid5 do |r
       <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>http://alexblog.surge.sh/posts/oracle/</guid>
-      <description>Instalación de Oracle 12c en Debian Jessie Adios amigos
+      <description>Instalación de Oracle 12c en Debian Jessie Luis como no funcione te mato
 Para instalar Oracle 12c debemos tener los siguientes requisitos mínimos:
  30GB de disco duro 2GB de RAM 2 procesadores Conexión a Internet  Configuración de Oracle Para la estructura de grupos y usuarios se recomienda la siguiente:
 addgroup --system oinstall addgroup --system dba adduser --system --ingroup oinstall -shell /bin/bash oracle adduser oracle dba passwd oracle Creación de directorios requeridos de Oracle:</description>
