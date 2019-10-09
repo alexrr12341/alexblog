@@ -38,7 +38,7 @@ disqusShortname = "yourdiscussshortname"
     enableLinkedInShare = true
 
     thumbnail = "images/tn.png"
-
+    Oracle1 = "images/Oracle1.png"
     # Custom CSS
     custom_css = []
 

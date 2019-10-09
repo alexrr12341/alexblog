@@ -63,6 +63,11 @@
   </url>
   
   <url>
+    <loc>http://alexblog.surge.sh/posts/oracle/</loc>
+    <lastmod>2019-10-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://alexblog.surge.sh/tags/</loc>
     <lastmod>2019-10-01T00:00:00+00:00</lastmod>
   </url>
@@ -73,7 +78,7 @@
   </url>
   
   <url>
-    <loc>http://alexblog.surge.sh/posts/hugo-template-primer/</loc>
+    <loc>http://alexblog.surge.sh/posts/raid1/</loc>
     <lastmod>2019-09-28T00:00:00+00:00</lastmod>
   </url>
   

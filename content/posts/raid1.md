@@ -1,7 +1,7 @@
 +++
 date = "2019-09-28"
 title = "Ejercicio Raid 1"
-slug = "hugo-template-primer"
+slug = "raid1"
 tags = [
     "go",
     "golang",

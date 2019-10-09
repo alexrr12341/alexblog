@@ -1,0 +1,28 @@
+{
+  "name": "alexblog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexrr12341/alexblog.git"
+  },
+  "author": "Alejandro Rodríguez Rojas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexrr12341/alexblog/issues"
+  },
+  "homepage": "https://github.com/alexrr12341/alexblog#readme"
+}
+
+devDependencies": {
+  "surge": "latest",
+  "git-scripts": "0.2.1"
+},
+"git": {
+  "scripts": {
+    "pre-push": "surge --project ./public/ --domain alexblog.surge.sh"
+  }
