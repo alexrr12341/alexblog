@@ -7,7 +7,7 @@ math = "true"
 
 ## Instalación de Oracle 12c en Debian Jessie
 
-Adios
+Adios amigos
 
 Para instalar Oracle 12c debemos tener los siguientes requisitos mínimos:
 
