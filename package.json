@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "surge --domain alexblog.surge.sh /home/alexrr/Hugo/alexblog/public/"
+    "pre-push": "surge --domain alexblog.surge.sh /home/alexrr/Hugo/alexblog/public/"
   },
   "repository": {
     "type": "git",
