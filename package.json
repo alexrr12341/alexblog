@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "pre-push": "hugo",
     "pre-push": "surge --domain alexblog.surge.sh /home/alexrr/Hugo/alexblog/public/"
   },
   "repository": {
