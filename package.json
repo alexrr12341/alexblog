@@ -4,17 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "git": {
-  "scripts": {
-    "pre-push": "surge --project ./public/ --domain alexblog.surge.sh"
+    "test": "surge --domain alexblog.surge.sh /home/alexrr/Hugo/alexblog/public/"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alexrr12341/alexblog.git"
   },
-  "author": "Alejandro Rodríguez Rojas",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/alexrr12341/alexblog/issues"
