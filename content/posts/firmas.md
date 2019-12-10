@@ -1,6 +1,6 @@
 +++
 date = "2019-12-10"
-title = "Cifrado Asimétrico (GPG/OpenSSL)"
+title = "Integridad, firmas y autentificación"
 math = "true"
 
 +++
