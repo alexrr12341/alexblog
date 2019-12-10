@@ -1388,16 +1388,16 @@ systemctl restart apache2</pre></div>
 <p>Clonamos el repositorio</p>
 <div class="highlight"><pre class="chroma">root@servidorpdns:/var/www# git clone https://github.com/loewexy/pdnsmanager.git</pre></div>
 <p>Ahora entramos a la página y ponemos /setup
-!powerdnsmanager.png!</p>
+<img src="/images/powerdnsmanager.png" alt="" /></p>
 
 <p>En dicha página, no podremos usar la base de datos antigüa ya que esta web tiene un diseño de la base de datos distinto al que hemos creado, por lo que vamos a probarlo con una nueva base de datos</p>
 <div class="highlight"><pre class="chroma">create database pdnsmanager
 grant all privileges on pdnsmanager.* to pdns;
 flush privileges;</pre></div>
-<p>!powerdnsmanager2.png!</p>
+<p><img src="/images/powerdnsmanager2.png" alt="" /></p>
 
 <p>Para añadir nuevos registros añadimos un nuevo master y seguimos haciendo los registros NS y A respectivamente
-!powerdnsmanager3.png!</p>
+<img src="/images/powerdnsmanager3.png" alt="" /></p>
 
 <p>Vamos a probar ahora que en dichos registros podemos consultar al servidor, para que funcione deberemos cambiar la base de datos en el fichero /etc/powerdns/pdns.conf y tener abierto el puerto 53 para pdns</p>
 <div class="highlight"><pre class="chroma">launch=gmysql
