@@ -1626,7 +1626,7 @@ root@servidorpdns:/var/www# git clone https://github.com/loewexy/pdnsmanager.git
 ```
 
 Ahora entramos a la página y ponemos /setup
-!powerdnsmanager.png!
+![](/images/powerdnsmanager.png)
 
 En dicha página, no podremos usar la base de datos antigüa ya que esta web tiene un diseño de la base de datos distinto al que hemos creado, por lo que vamos a probarlo con una nueva base de datos
 ```
@@ -1635,10 +1635,10 @@ grant all privileges on pdnsmanager.* to pdns;
 flush privileges;
 ```
 
-!powerdnsmanager2.png!
+![](/images/powerdnsmanager2.png)
 
 Para añadir nuevos registros añadimos un nuevo master y seguimos haciendo los registros NS y A respectivamente
-!powerdnsmanager3.png!
+![](/images/powerdnsmanager3.png)
 
 Vamos a probar ahora que en dichos registros podemos consultar al servidor, para que funcione deberemos cambiar la base de datos en el fichero /etc/powerdns/pdns.conf y tener abierto el puerto 53 para pdns
 ```

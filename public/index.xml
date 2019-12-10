@@ -32,6 +32,16 @@ Vagrant.configure(&amp;#34;2&amp;#34;) do |config| config.vm.define :nginx do |n
     </item>
     
     <item>
+      <title>Servidores DNS</title>
+      <link>http://alexblog.surge.sh/posts/dns/</link>
+      <pubDate>Tue, 10 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://alexblog.surge.sh/posts/dns/</guid>
+      <description>Tarea 1 (2 punto)(Obligatorio): Modifica los clientes para que utilicen el nuevo servidor dns. Realiza una consulta a www.iesgn.org, y a www.josedomingo.org. Realiza una prueba de funcionamiento para comprobar que el servidor dnsmasq funciona como cache dns. Muestra el fichero hosts del cliente para demostrar que no estás utilizando resolución estática. Realiza una consulta directa al servidor dnsmasq. ¿Se puede realizar resolución inversa?. Documenta la tarea en redmine.
+Primero instalamos dnsmasq.</description>
+    </item>
+    
+    <item>
       <title>Script para seleccionar paquetes por repositorio</title>
       <link>http://alexblog.surge.sh/posts/scriptrepositorio/</link>
       <pubDate>Wed, 02 Oct 2019 00:00:00 +0000</pubDate>
@@ -81,16 +91,6 @@ addgroup --system oinstall addgroup --system dba adduser --system --ingroup oins
       <description>Instalación de Hugo Para instalar el generador Hugo simplemente debemos ejecutar el siguiente comando en la terminal
 apt-get install hugo  Hugo utiliza el lenguaje de programación Go Hugo utiliza el sistema de plantillas Go  Para crear un sitio web solo debemos ejecutar el siguiente comando en la terminal
 hugo new site {nombre} Configuración del theme Primero debemos elegir la plantilla Go que queramos y hacemos un git clone(debemos ponerla en la carpeta themes)</description>
-    </item>
-    
-    <item>
-      <title>Servidores DNS (Bind9/PowerDNS/DNSMasq)</title>
-      <link>http://alexblog.surge.sh/posts/dns/</link>
-      <pubDate>Mon, 30 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://alexblog.surge.sh/posts/dns/</guid>
-      <description>Tarea 1 (2 punto)(Obligatorio): Modifica los clientes para que utilicen el nuevo servidor dns. Realiza una consulta a www.iesgn.org, y a www.josedomingo.org. Realiza una prueba de funcionamiento para comprobar que el servidor dnsmasq funciona como cache dns. Muestra el fichero hosts del cliente para demostrar que no estás utilizando resolución estática. Realiza una consulta directa al servidor dnsmasq. ¿Se puede realizar resolución inversa?. Documenta la tarea en redmine.
-Primero instalamos dnsmasq.</description>
     </item>
     
     <item>
