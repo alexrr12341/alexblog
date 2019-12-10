@@ -1,6 +1,6 @@
 +++
-date = "2019-09-30"
-title = "Servidores DNS (Bind9/PowerDNS/DNSMasq)"
+date = "2019-12-10"
+title = "Servidores DNS"
 math = "true"
 
 +++

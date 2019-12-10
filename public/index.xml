@@ -84,6 +84,16 @@ hugo new site {nombre} Configuración del theme Primero debemos elegir la planti
     </item>
     
     <item>
+      <title>Servidores DNS (Bind9/PowerDNS/DNSMasq)</title>
+      <link>http://alexblog.surge.sh/posts/dns/</link>
+      <pubDate>Mon, 30 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://alexblog.surge.sh/posts/dns/</guid>
+      <description>Tarea 1 (2 punto)(Obligatorio): Modifica los clientes para que utilicen el nuevo servidor dns. Realiza una consulta a www.iesgn.org, y a www.josedomingo.org. Realiza una prueba de funcionamiento para comprobar que el servidor dnsmasq funciona como cache dns. Muestra el fichero hosts del cliente para demostrar que no estás utilizando resolución estática. Realiza una consulta directa al servidor dnsmasq. ¿Se puede realizar resolución inversa?. Documenta la tarea en redmine.
+Primero instalamos dnsmasq.</description>
+    </item>
+    
+    <item>
       <title>Ejercicio Raid 1</title>
       <link>http://alexblog.surge.sh/posts/raid1/</link>
       <pubDate>Sat, 28 Sep 2019 00:00:00 +0000</pubDate>
