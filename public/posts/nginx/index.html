@@ -123,7 +123,7 @@
         nginx.vm.network :private_network, ip: &#34;10.1.1.103&#34;, virtualbox__intnet: &#34;apache&#34;
   end
 end</pre></div><div class="highlight"><pre class="chroma">apt install nginx</pre></div>
-<p>!capturanginx.png!</p>
+<p><img src="/images/capturanginx.png" alt="" /></p>
 
 <p><em>Tarea 2 (1 punto)(Obligatorio): Configura la resolución estática en los clientes y muestra el acceso a cada una de las páginas.</em></p>
 
@@ -166,8 +166,8 @@ sudo systemctl restart nginx</pre></div>
 <div class="highlight"><pre class="chroma">mkdir /srv/www
 mkdir /srv/www/iesgn
 mkdir /srv/www/departamentos</pre></div>
-<p>!iesgnnginx.png!
-!departamentosnginx.png!</p>
+<p><img src="/images/iesgnnginx.png" alt="" />
+<img src="/images/departamentosnginx.png" alt="" /></p>
 
 <p><em>Tarea 3 (1 punto)(Obligatorio): Cuando se entre a la dirección www.iesgn.org se redireccionará automáticamente a www.iesgn.org/principal, donde se mostrará el mensaje de bienvenida. En el directorio principal no se permite ver la lista de los ficheros, no se permite que se siga los enlaces s en imbólicos y no se permite negociación de contenido. Muestra al profesor el funcionamiento.</em></p>
 
@@ -211,8 +211,8 @@ vagrant@local:/srv/www/iesgn/principal$ sudo mv ../index.nginx-debian.html .</pr
                 root /srv/error;
                 internal;
         }</pre></div>
-<p>!error404.png!
-!error403.png!</p>
+<p><img src="/images/error404.png" alt="" />
+<img src="/images/error403.png" alt="" /></p>
 
 <p><em>Tarea 6 (1 punto)(Obligatorio): Añade al escenario Vagrant otra máquina conectada por una red interna al servidor. A la URL departamentos.iesgn.org/intranet sólo se debe tener acceso desde el cliente de la red local, y no se pueda acceder desde la anfitriona por la red pública. A la URL departamentos.iesgn.org/internet, sin embargo, sólo se debe tener acceso desde la anfitriona por la red pública, y no desde la red local.</em></p>
 
@@ -229,11 +229,11 @@ location /internet {
                 deny all;
         }</pre></div>
 <p>Internet:
-!pruebainternetfuera.png!
-!pruebainternetdentro.png!
+<img src="/images/pruebainternetfuera.png" alt="" />
+<img src="/images/pruebainternetdentro.png" alt="" />
 Intranet:
-!pruebaintranetfuera.png!
-!pruebaintranetdentro.png!</p>
+<img src="/images/pruebaintranetfuera.png" alt="" />
+<img src="/images/pruebaintranetdentro.png" alt="" /></p>
 
 <p><em>Tarea 7 (1 punto): Autentificación básica. Limita el acceso a la URL departamentos.iesgn.org/secreto. Comprueba las cabeceras de los mensajes HTTP que se intercambian entre el servidor y el cliente. ¿Cómo se manda la contraseña entre el cliente y el servidor?. Entrega una breve explicación del ejercicio.</em></p>
 
@@ -251,10 +251,10 @@ sudo sh -c &#34;echo -n &#39;usuario:&#39; &gt;&gt; /etc/nginx/claves/htpasswd&#
 sudo sh -c &#34;openssl passwd -apr1 &gt;&gt; /etc/nginx/claves/htpasswd&#34;</pre></div>
 <p>Y ya debería funcionar:</p>
 
-<p>!imagenht.png!
-!imagenht2.png!</p>
+<p><img src="/images/imagenht.png" alt="" />
+<img src="/images/imagenht2.png" alt="" /></p>
 
-<p>!cabeceras.png!</p>
+<p><img src="/images/cabeceras.png" alt="" /></p>
 
 <p>En Authorization: Basic dXN1YXJpbzp1c3Vhcmlv está en base64 con el siguiente formado &ldquo;usuario:contraseña&rdquo;</p>
 
@@ -270,9 +270,9 @@ Para hacer esta tarea, debemos entrar en nuestro virtual host y poner las siguie
 <p>Ahora comprobaremos si está funcionando</p>
 
 <p>local:
-!localnginx.png!
+<img src="/images/localnginx.png" alt="" />
 Internet:
-!internetnginx.png!</p>
+<img src="/images/internetnginx.png" alt="" /></p>
 
   </article>
 
