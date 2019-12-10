@@ -10,7 +10,7 @@ math = "true"
 apt install apache2
 ```
 En /var/www/html editamos el fichero index.html y accedemos a la IP de la máquina en nuestro navegador
-!Apache.png!
+![](/images/Apache.png)
 
 *Tarea 2 (2 puntos)(Obligatorio): Configura la resolución estática en los clientes y muestra el acceso a cada una de las páginas.*
 
@@ -79,10 +79,10 @@ systemctl restart apache2
 
 Para acceder a los virtual host debemos poner el DNS en nuestra máquina en /etc/hosts
 
-!iesgn.png!
 
-!departamentos.png!
+![](/images/iesgn.png)
 
+![](/images/departamentos.png)
 
 *Tarea 3 (1 punto)(Obligatorio): Cuando se entre a la dirección www.iesgn.org se redireccionará automáticamente a www.iesgn.org/principal, donde se mostrará el mensaje de bienvenida. En el directorio principal no se permite ver la lista de los ficheros, no se permite que se siga los enlaces simbólicos y no se permite negociación de contenido. Muestra al profesor el funcionamiento.*
 
@@ -148,9 +148,8 @@ El error 403 lo añadimos así
         ErrorDocument 403 /error/403.html
 ```
 
-!nopermitido.png!
-!noencontrado.png!
-
+![](/images/nopermitido.png)
+![](/images/noencontrado.png)
 *Tarea 6 (1 punto)(Obligatorio): Añade al escenario Vagrant otra máquina conectada por una red interna al servidor. A la URL departamentos.iesgn.org/intranet sólo se debe tener acceso desde el cliente de la red local, y no se pueda acceder desde la anfitriona por la red pública. A la URL departamentos.iesgn.org/internet, sin embargo, sólo se debe tener acceso desde la anfitriona por la red pública, y no desde la red local.*
 
 Para la intranet añadimos la siguiente línea en departamentos.conf
@@ -162,12 +161,11 @@ Para la intranet añadimos la siguiente línea en departamentos.conf
 
 Maquina de fuera:
 
-!intranet1.png!
+![](/images/intranet1.png)
 
 Maquina local:
 
-!intranet2.png!
-
+![](/images/intranet2.png)
 Para el internet añadimos la siguiente linea en departamentos.conf
 ```
 <Directory /srv/www/departamentos/internet>
@@ -177,11 +175,11 @@ Para el internet añadimos la siguiente linea en departamentos.conf
 
 Maquina de fuera:
 
-!internet1.png!
+![](/images/internet1.png)
 
 Maquina local:
 
-!internet2.png!
+![](/images/internet2.png)
 
 *Tarea 7 (1 punto): Autentificación básica. Limita el acceso a la URL departamentos.iesgn.org/secreto. Comprueba las cabeceras de los mensajes HTTP que se intercambian entre el servidor y el cliente. ¿Cómo se manda la contraseña entre el cliente y el servidor?. Entrega una breve explicación del ejercicio.*
 
@@ -200,8 +198,8 @@ Y ahora añadimos al usuario
 htpasswd -c /etc/apache2/claves/contra.txt usuario
 ```
 
-!autentificacion.png!
-!autentificacion2.png!
+![](/images/autentificacion.png)
+![](/images/autentificacion2.png)
 
 ```
 	GET /secreto/ HTTP/1.1
@@ -276,12 +274,12 @@ Estas líneas harán que si entran por la red local accedan directamente y sino 
 
 
 Local:
-!pruebalocal.png!
+
+![](/images/pruebalocal.png)
 
 Fuera:
 
-!pruebafuera.png!
-
+![](/images/pruebafuera.png)
 Añadiremos la Ip de la Intranet para que puedan acceder directamente, sino accederán mediante la contraseña.
 
 
@@ -290,7 +288,7 @@ Para habilitar el listado de ficheros creamos un .htacess en la carpeta nas y po
 ```
 Options +Indexes
 ```
-!hosting1.png!
+![](/images/hosting1.png)
 
 *Tarea 11 (1 punto): Crea una redirección permanente: cuando entremos en ttp://host.dominio/google salte a www.google.es.*
 Para hacer la redirección simplemente creamos un .htacess en la raiz de la página y ponemos la siguiente línea
@@ -309,9 +307,8 @@ AuthType Basic
 Require valid-user
 ```
 
-!pruebaweb1.png!
-!pruebaweb2.png!
-
+![](/images/pruebaweb1.png)
+![](/images/pruebaweb2.png)
 
 *Tarea 13 (2 puntos)(Obligatorio): Módulo userdir: Activa y configura el módulo userdir, que permite que cada usuario del sistema tenga la posibilidad de tener un directorio (por defecto se llama public_html) donde alojar su página web. Publica una página de un usuario, y accede a la misma. Esta tarea la tienes que hacer en tu servidor.*
 
@@ -335,7 +332,7 @@ public_html
 
 Ahora dentro de la carpeta creamos un index.html y probamos que funcione (se le pone ~alex en la url para que funcione)
 
-!userdirprueba.png!
+![](/images/userdirprueba.png)
 
 *Tarea 14 (2 puntos): En tu servidor crea una carpeta php donde vamos a tener un fichero index.php con el siguiente contenido:*
 ```
@@ -411,5 +408,5 @@ Y ahora añadimos las siguientes lineas a nuestro iesgn.conf
 </Directory>
 ```
 
-!pruebarewrite.png!
+![](/images/pruebarewrite.png)
 
