@@ -1,6 +1,6 @@
 +++
 date = "2019-12-10"
-title = "Primeros pasos de Hugo"
+title = "Servidor Nginx"
 math = "true"
 
 +++

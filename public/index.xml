@@ -12,6 +12,16 @@
     
     
     <item>
+      <title>Primeros pasos de Hugo</title>
+      <link>http://alexblog.surge.sh/posts/nginx/</link>
+      <pubDate>Tue, 10 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://alexblog.surge.sh/posts/nginx/</guid>
+      <description>Tarea 1 (1 punto)(Obligatorio): Crea un escenario Vagrant o utiliza una máquina del cloud con una red pública. Instala el servidor web nginx en la máquina. Modifica la página index.html que viene por defecto y accede a ella desde un navegador. Entrega una captura de pantalla accediendo a ella.
+Vagrant.configure(&amp;#34;2&amp;#34;) do |config| config.vm.define :nginx do |nginx| nginx.vm.box = &amp;#34;debian/buster64&amp;#34; nginx.vm.hostname = &amp;#34;local&amp;#34; nginx.vm.network :public_network,:bridge=&amp;gt;&amp;#34;wlp0s20f3&amp;#34; nginx.vm.network :private_network, ip: &amp;#34;10.1.1.103&amp;#34;, virtualbox__intnet: &amp;#34;apache&amp;#34; end endapt install nginx !</description>
+    </item>
+    
+    <item>
       <title>Servidor Apache2</title>
       <link>http://alexblog.surge.sh/posts/apache/</link>
       <pubDate>Tue, 10 Dec 2019 00:00:00 +0000</pubDate>
