@@ -117,7 +117,7 @@
     <p><em>Tarea 1 (1 punto)(Obligatorio): Crea un escenario Vagrant con una máquina con una red pública o utiliza una máquina del cloud. Instala el servidor web Apache2 en la máquina. Modifica la página index.html que viene por defecto y accede a ella desde un navegador. Entrega una captura de pantalla accediendo a ella.</em></p>
 <div class="highlight"><pre class="chroma">apt install apache2</pre></div>
 <p>En /var/www/html editamos el fichero index.html y accedemos a la IP de la máquina en nuestro navegador
-!Apache.png!</p>
+<img src="/images/Apache.png" alt="" /></p>
 
 <p><em>Tarea 2 (2 puntos)(Obligatorio): Configura la resolución estática en los clientes y muestra el acceso a cada una de las páginas.</em></p>
 
@@ -165,9 +165,9 @@ a2ensite departamentos
 systemctl restart apache2</pre></div>
 <p>Para acceder a los virtual host debemos poner el DNS en nuestra máquina en /etc/hosts</p>
 
-<p>!iesgn.png!</p>
+<p><img src="/images/iesgn.png" alt="" /></p>
 
-<p>!departamentos.png!</p>
+<p><img src="/images/departamentos.png" alt="" /></p>
 
 <p><em>Tarea 3 (1 punto)(Obligatorio): Cuando se entre a la dirección www.iesgn.org se redireccionará automáticamente a www.iesgn.org/principal, donde se mostrará el mensaje de bienvenida. En el directorio principal no se permite ver la lista de los ficheros, no se permite que se siga los enlaces simbólicos y no se permite negociación de contenido. Muestra al profesor el funcionamiento.</em></p>
 
@@ -206,10 +206,9 @@ echo &#34;hola&#34; &gt; prueba.txt</pre></div>
 <div class="highlight"><pre class="chroma">        ErrorDocument 404 /error/404.html</pre></div>
 <p>El error 403 lo añadimos así</p>
 <div class="highlight"><pre class="chroma">        ErrorDocument 403 /error/403.html</pre></div>
-<p>!nopermitido.png!
-!noencontrado.png!</p>
-
-<p><em>Tarea 6 (1 punto)(Obligatorio): Añade al escenario Vagrant otra máquina conectada por una red interna al servidor. A la URL departamentos.iesgn.org/intranet sólo se debe tener acceso desde el cliente de la red local, y no se pueda acceder desde la anfitriona por la red pública. A la URL departamentos.iesgn.org/internet, sin embargo, sólo se debe tener acceso desde la anfitriona por la red pública, y no desde la red local.</em></p>
+<p><img src="/images/nopermitido.png" alt="" />
+<img src="/images/noencontrado.png" alt="" />
+<em>Tarea 6 (1 punto)(Obligatorio): Añade al escenario Vagrant otra máquina conectada por una red interna al servidor. A la URL departamentos.iesgn.org/intranet sólo se debe tener acceso desde el cliente de la red local, y no se pueda acceder desde la anfitriona por la red pública. A la URL departamentos.iesgn.org/internet, sin embargo, sólo se debe tener acceso desde la anfitriona por la red pública, y no desde la red local.</em></p>
 
 <p>Para la intranet añadimos la siguiente línea en departamentos.conf</p>
 <div class="highlight"><pre class="chroma">&lt;Directory /srv/www/departamentos/intranet&gt;
@@ -217,23 +216,22 @@ echo &#34;hola&#34; &gt; prueba.txt</pre></div>
 &lt;/Directory&gt;</pre></div>
 <p>Maquina de fuera:</p>
 
-<p>!intranet1.png!</p>
+<p><img src="/images/intranet1.png" alt="" /></p>
 
 <p>Maquina local:</p>
 
-<p>!intranet2.png!</p>
-
-<p>Para el internet añadimos la siguiente linea en departamentos.conf</p>
+<p><img src="/images/intranet2.png" alt="" />
+Para el internet añadimos la siguiente linea en departamentos.conf</p>
 <div class="highlight"><pre class="chroma">&lt;Directory /srv/www/departamentos/internet&gt;
                 Require ip 172.22.0.1/16
 &lt;/Directory&gt;</pre></div>
 <p>Maquina de fuera:</p>
 
-<p>!internet1.png!</p>
+<p><img src="/images/internet1.png" alt="" /></p>
 
 <p>Maquina local:</p>
 
-<p>!internet2.png!</p>
+<p><img src="/images/internet2.png" alt="" /></p>
 
 <p><em>Tarea 7 (1 punto): Autentificación básica. Limita el acceso a la URL departamentos.iesgn.org/secreto. Comprueba las cabeceras de los mensajes HTTP que se intercambian entre el servidor y el cliente. ¿Cómo se manda la contraseña entre el cliente y el servidor?. Entrega una breve explicación del ejercicio.</em></p>
 
@@ -246,8 +244,8 @@ echo &#34;hola&#34; &gt; prueba.txt</pre></div>
   &lt;/Directory&gt;</pre></div>
 <p>Y ahora añadimos al usuario</p>
 <div class="highlight"><pre class="chroma">htpasswd -c /etc/apache2/claves/contra.txt usuario</pre></div>
-<p>!autentificacion.png!
-!autentificacion2.png!</p>
+<p><img src="/images/autentificacion.png" alt="" />
+<img src="/images/autentificacion2.png" alt="" /></p>
 <div class="highlight"><pre class="chroma">	GET /secreto/ HTTP/1.1
 	Host: www.departamentos.iesgn.org
 	User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0
@@ -296,19 +294,19 @@ Estas líneas harán que si entran por la red local accedan directamente y sino 
                 Require ip 10.1.1.0/24
                 Require valid-user
  &lt;/Directory&gt;</pre></div>
-<p>Local:
-!pruebalocal.png!</p>
+<p>Local:</p>
+
+<p><img src="/images/pruebalocal.png" alt="" /></p>
 
 <p>Fuera:</p>
 
-<p>!pruebafuera.png!</p>
-
-<p>Añadiremos la Ip de la Intranet para que puedan acceder directamente, sino accederán mediante la contraseña.</p>
+<p><img src="/images/pruebafuera.png" alt="" />
+Añadiremos la Ip de la Intranet para que puedan acceder directamente, sino accederán mediante la contraseña.</p>
 
 <p><em>Tarea 10 (1 punto)(Obligatorio): Habilita el listado de ficheros en la URL <a href="http://host.dominio/nas">http://host.dominio/nas</a>.</em>
 Para habilitar el listado de ficheros creamos un .htacess en la carpeta nas y ponemos la siguiente linea</p>
 <div class="highlight"><pre class="chroma">Options +Indexes</pre></div>
-<p>!hosting1.png!</p>
+<p><img src="/images/hosting1.png" alt="" /></p>
 
 <p><em>Tarea 11 (1 punto): Crea una redirección permanente: cuando entremos en ttp://host.dominio/google salte a www.google.es.</em>
 Para hacer la redirección simplemente creamos un .htacess en la raiz de la página y ponemos la siguiente línea</p>
@@ -321,8 +319,8 @@ Luego crearemos un .htaccess en la carpeta prohibido y pondremos las siguientes 
 AuthName &#34;Autentificacion&#34; 
 AuthType Basic
 Require valid-user</pre></div>
-<p>!pruebaweb1.png!
-!pruebaweb2.png!</p>
+<p><img src="/images/pruebaweb1.png" alt="" />
+<img src="/images/pruebaweb2.png" alt="" /></p>
 
 <p><em>Tarea 13 (2 puntos)(Obligatorio): Módulo userdir: Activa y configura el módulo userdir, que permite que cada usuario del sistema tenga la posibilidad de tener un directorio (por defecto se llama public_html) donde alojar su página web. Publica una página de un usuario, y accede a la misma. Esta tarea la tienes que hacer en tu servidor.</em></p>
 
@@ -337,7 +335,7 @@ chmod 755 public_html</pre></div>
 public_html</pre></div>
 <p>Ahora dentro de la carpeta creamos un index.html y probamos que funcione (se le pone ~alex en la url para que funcione)</p>
 
-<p>!userdirprueba.png!</p>
+<p><img src="/images/userdirprueba.png" alt="" /></p>
 
 <p><em>Tarea 14 (2 puntos): En tu servidor crea una carpeta php donde vamos a tener un fichero index.php con el siguiente contenido:</em></p>
 <div class="highlight"><pre class="chroma">  &lt;!DOCTYPE html PUBLIC &#34;-//W3C//DTD XHTML 1.0 Transitional//EN&#34; &#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&#34;&gt;
@@ -397,7 +395,7 @@ RewriteRule ^([a-zA-Z]+)/([0-9]+)$ index.php?pais=$1&amp;monto=$2</pre></div>
                 AllowOverride All
                 Require all granted
 &lt;/Directory&gt;</pre></div>
-<p>!pruebarewrite.png!</p>
+<p><img src="/images/pruebarewrite.png" alt="" /></p>
 
   </article>
 
