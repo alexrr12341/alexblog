@@ -15,8 +15,10 @@ Alumno de 2º de Administración de Sistemas Informáticos en Red.
 Gracias por visitar mi página.
 
 Amplios conocimientos en:
+
 * Bases de Datos(Oracle,MongoDB,MariaDB,PostgreSQL)
 * Sistemas Operativos(Debian y Windows)
 * Lenguaje de programación Python
 * Lenguajes de Marcas(Markdown,JSON,Html5)
 
+Hola
