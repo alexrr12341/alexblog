@@ -1,6 +1,6 @@
 +++
 date = "2019-12-10"
-title = "Como instalar un CMS de Python en Centos 8"
+title = "Como instalar un CMS de Python en Centos 8 con Gunicorn/Nginx"
 math = "true"
 
 +++
