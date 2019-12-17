@@ -3,152 +3,152 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://alexblog.surge.sh/</loc>
+    <loc>http://blog.alexrrinformatico.com/</loc>
     <lastmod>2019-12-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alexblog.surge.sh/posts/gpg/</loc>
+    <loc>http://blog.alexrrinformatico.com/posts/gpg/</loc>
     <lastmod>2019-12-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alexblog.surge.sh/posts/pythoncms/</loc>
+    <loc>http://blog.alexrrinformatico.com/posts/pythoncms/</loc>
     <lastmod>2019-12-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alexblog.surge.sh/posts/python/</loc>
+    <loc>http://blog.alexrrinformatico.com/posts/python/</loc>
     <lastmod>2019-12-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alexblog.surge.sh/posts/firmas/</loc>
+    <loc>http://blog.alexrrinformatico.com/posts/firmas/</loc>
     <lastmod>2019-12-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alexblog.surge.sh/posts/</loc>
+    <loc>http://blog.alexrrinformatico.com/posts/</loc>
     <lastmod>2019-12-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alexblog.surge.sh/posts/apache/</loc>
+    <loc>http://blog.alexrrinformatico.com/posts/apache/</loc>
     <lastmod>2019-12-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alexblog.surge.sh/posts/nginx/</loc>
+    <loc>http://blog.alexrrinformatico.com/posts/nginx/</loc>
     <lastmod>2019-12-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alexblog.surge.sh/posts/dns/</loc>
+    <loc>http://blog.alexrrinformatico.com/posts/dns/</loc>
     <lastmod>2019-12-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alexblog.surge.sh/posts/scriptrepositorio/</loc>
+    <loc>http://blog.alexrrinformatico.com/posts/scriptrepositorio/</loc>
     <lastmod>2019-10-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alexblog.surge.sh/posts/creating-a-new-theme/</loc>
+    <loc>http://blog.alexrrinformatico.com/posts/creating-a-new-theme/</loc>
     <lastmod>2019-10-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alexblog.surge.sh/categories/</loc>
+    <loc>http://blog.alexrrinformatico.com/categories/</loc>
     <lastmod>2019-10-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alexblog.surge.sh/categories/development/</loc>
+    <loc>http://blog.alexrrinformatico.com/categories/development/</loc>
     <lastmod>2019-10-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alexblog.surge.sh/tags/development/</loc>
+    <loc>http://blog.alexrrinformatico.com/tags/development/</loc>
     <lastmod>2019-10-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alexblog.surge.sh/posts/raid5/</loc>
+    <loc>http://blog.alexrrinformatico.com/posts/raid5/</loc>
     <lastmod>2019-10-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alexblog.surge.sh/tags/go/</loc>
+    <loc>http://blog.alexrrinformatico.com/tags/go/</loc>
     <lastmod>2019-10-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alexblog.surge.sh/tags/golang/</loc>
+    <loc>http://blog.alexrrinformatico.com/categories/golang/</loc>
     <lastmod>2019-10-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alexblog.surge.sh/categories/golang/</loc>
+    <loc>http://blog.alexrrinformatico.com/tags/golang/</loc>
     <lastmod>2019-10-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alexblog.surge.sh/tags/hugo/</loc>
+    <loc>http://blog.alexrrinformatico.com/tags/hugo/</loc>
     <lastmod>2019-10-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alexblog.surge.sh/posts/oracle/</loc>
+    <loc>http://blog.alexrrinformatico.com/posts/oracle/</loc>
     <lastmod>2019-10-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alexblog.surge.sh/tags/</loc>
+    <loc>http://blog.alexrrinformatico.com/tags/</loc>
     <lastmod>2019-10-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alexblog.surge.sh/posts/hugo/</loc>
+    <loc>http://blog.alexrrinformatico.com/posts/hugo/</loc>
     <lastmod>2019-09-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alexblog.surge.sh/posts/raid1/</loc>
+    <loc>http://blog.alexrrinformatico.com/posts/raid1/</loc>
     <lastmod>2019-09-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alexblog.surge.sh/tags/templates/</loc>
+    <loc>http://blog.alexrrinformatico.com/tags/templates/</loc>
     <lastmod>2019-09-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alexblog.surge.sh/tags/themes/</loc>
+    <loc>http://blog.alexrrinformatico.com/tags/themes/</loc>
     <lastmod>2019-09-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alexblog.surge.sh/about/</loc>
+    <loc>http://blog.alexrrinformatico.com/about/</loc>
   </url>
   
   <url>
-    <loc>http://alexblog.surge.sh/contact/</loc>
+    <loc>http://blog.alexrrinformatico.com/contact/</loc>
   </url>
   
   <url>
-    <loc>http://alexblog.surge.sh/contactar/</loc>
+    <loc>http://blog.alexrrinformatico.com/contactar/</loc>
   </url>
   
   <url>
-    <loc>http://alexblog.surge.sh/projects/</loc>
+    <loc>http://blog.alexrrinformatico.com/projects/</loc>
   </url>
   
   <url>
-    <loc>http://alexblog.surge.sh/projects/</loc>
+    <loc>http://blog.alexrrinformatico.com/projects/</loc>
   </url>
   
   <url>
-    <loc>http://alexblog.surge.sh/sobre/</loc>
+    <loc>http://blog.alexrrinformatico.com/sobre/</loc>
   </url>
   
 </urlset>

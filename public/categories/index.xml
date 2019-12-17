@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Alexblog</title>
-    <link>http://alexblog.surge.sh/categories/</link>
+    <link>http://blog.alexrrinformatico.com/categories/</link>
     <description>Recent content in Categories on Alexblog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Tue, 01 Oct 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://alexblog.surge.sh/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://blog.alexrrinformatico.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Development</title>
-      <link>http://alexblog.surge.sh/categories/development/</link>
+      <link>http://blog.alexrrinformatico.com/categories/development/</link>
       <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://alexblog.surge.sh/categories/development/</guid>
+      <guid>http://blog.alexrrinformatico.com/categories/development/</guid>
       <description></description>
     </item>
     
     <item>
       <title>golang</title>
-      <link>http://alexblog.surge.sh/categories/golang/</link>
+      <link>http://blog.alexrrinformatico.com/categories/golang/</link>
       <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://alexblog.surge.sh/categories/golang/</guid>
+      <guid>http://blog.alexrrinformatico.com/categories/golang/</guid>
       <description></description>
     </item>
     
