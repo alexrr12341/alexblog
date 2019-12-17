@@ -13,18 +13,6 @@
     
     <item>
       <title>Cifrado Asimétrico (GPG/OpenSSL)</title>
-      <link>http://alexblog.surge.sh/posts/firmas/</link>
-      <pubDate>Tue, 10 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://alexblog.surge.sh/posts/firmas/</guid>
-      <description>h2. Tarea 1: Firmas electrónicas (3 puntos)
-Manda un documento y la firma electrónica del mismo a un compañero. Verifica la firma que tu has recibido. Le mando el documento y la firma electrónica a Paco por scp.
-alexrr@pc-alex:~/gpg$ echo &amp;#34;Hola amigos&amp;#34; &amp;gt; paco alexrr@pc-alex:~/gpg$ gpg --output paco.sig --detach-sig paco Ahora la verificamos
-gpg --verify alex.sig alex alexrr@pc-alex:~/gpg$ gpg --verify alex.sig alex gpg: Firmado el mar 15 oct 2019 11:07:01 CEST gpg: usando RSA clave DA21BD5A7231AF245B1BA986733C176D1363BFF4 gpg: Firma correcta de &amp;#34;Francisco Guillermo García &amp;lt;pakotoes@gmail.</description>
-    </item>
-    
-    <item>
-      <title>Cifrado Asimétrico (GPG/OpenSSL)</title>
       <link>http://alexblog.surge.sh/posts/gpg/</link>
       <pubDate>Tue, 10 Dec 2019 00:00:00 +0000</pubDate>
       
@@ -48,6 +36,18 @@ mkdir /opt/python3 ./configure --prefix=/opt/python3make Nos saltará una depend
 zipimport.ZipImportError: can&amp;#39;t decompress data; zlib not available El paquete de esta dependencia es zlib1g-dev
 apt install zlib1g-dev Y ahora lo instalamos
 make make install</description>
+    </item>
+    
+    <item>
+      <title>Integridad, firmas y autentificación</title>
+      <link>http://alexblog.surge.sh/posts/firmas/</link>
+      <pubDate>Tue, 10 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://alexblog.surge.sh/posts/firmas/</guid>
+      <description>h2. Tarea 1: Firmas electrónicas (3 puntos)
+Manda un documento y la firma electrónica del mismo a un compañero. Verifica la firma que tu has recibido. Le mando el documento y la firma electrónica a Paco por scp.
+alexrr@pc-alex:~/gpg$ echo &amp;#34;Hola amigos&amp;#34; &amp;gt; paco alexrr@pc-alex:~/gpg$ gpg --output paco.sig --detach-sig paco Ahora la verificamos
+gpg --verify alex.sig alex alexrr@pc-alex:~/gpg$ gpg --verify alex.sig alex gpg: Firmado el mar 15 oct 2019 11:07:01 CEST gpg: usando RSA clave DA21BD5A7231AF245B1BA986733C176D1363BFF4 gpg: Firma correcta de &amp;#34;Francisco Guillermo García &amp;lt;pakotoes@gmail.</description>
     </item>
     
     <item>
