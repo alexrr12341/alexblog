@@ -1,4 +1,4 @@
-baseurl = "http://alexblog.surge.sh"
+baseurl = "http://blog.alexrrinformatico.com"
 title = "Alexblog"
 
 theme = "hugo-coder-portfolio"
