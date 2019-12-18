@@ -193,7 +193,20 @@ Ahora vamos a instalar guicorn en pip
 pip install gunicorn
 ```
 
-Ahora vamos a crear la unidad systemd para guincorn
+Vamos a crear el socket de gunicorn para poder ejecutarlo en nginx en /etc/systemd/system/gunicorn.socket
+```
+[Unit]
+Description=gunicorn socket
+
+[Socket]
+ListenStream=/run/gunicorn.sock
+
+[Install]
+WantedBy=sockets.target
+
+```
+
+Ahora vamos a crear la unidad systemd para guincorn en /etc/systemd/system/gunicorn.service
 ```
 sudo nano /etc/systemd/system/gunicorn.service
 
