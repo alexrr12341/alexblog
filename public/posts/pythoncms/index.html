@@ -222,7 +222,16 @@ MariaDB [pythoncms]&gt; set global innodb_default_row_format = DYNAMIC;</pre></d
 Installed 157 object(s) from 1 fixture(s)</pre></div>
 <p>Ahora vamos a instalar guicorn en pip</p>
 <div class="highlight"><pre class="chroma">pip install gunicorn</pre></div>
-<p>Ahora vamos a crear la unidad systemd para guincorn</p>
+<p>Vamos a crear el socket de gunicorn para poder ejecutarlo en nginx en /etc/systemd/system/gunicorn.socket</p>
+<div class="highlight"><pre class="chroma">[Unit]
+Description=gunicorn socket
+
+[Socket]
+ListenStream=/run/gunicorn.sock
+
+[Install]
+WantedBy=sockets.target</pre></div>
+<p>Ahora vamos a crear la unidad systemd para guincorn en /etc/systemd/system/gunicorn.service</p>
 <div class="highlight"><pre class="chroma">sudo nano /etc/systemd/system/gunicorn.service
 
 [Unit]
