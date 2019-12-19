@@ -149,11 +149,8 @@ MariaDB [pythoncms]> set global innodb_default_row_format = DYNAMIC;
 ```
 
 Ahora tenemos que modificar el settings.py para que coja nuestra base de datos mysql
-```
-pip install mysql-connector-python
-```
 
-Y metemos la base de datos
+Metemos los datos de la base de datos en settings.py
 ```
 DATABASES = {
       'default': {
@@ -285,16 +282,20 @@ server {
       proxy_pass http://unix:/run/gunicorn.sock;
     }
     location /static {
-        alias /var/www/pythoncms/flat/static;
-    }
-    location /static/grappelli {
-        alias /var/www/entorno/lib/python3.6/site-packages/grappelli_safe/static/grappelli;
-    }
-    location /static/mezzanine {
-	alias /var/www/pythoncms/paquetes/lib/python3.6/site-packages/mezzanine/core/static/mezzanine;
+        alias /var/www/pythoncms/static;
     }
 }
 ```
+
+Para que salga los static debemos hacer:
+
+```
+chown -R centos:centos /var/www/pythoncms
+python3 manage.py collectstatic
+chown -R nginx:nginx /var/www/pythoncms
+```
+
+Y si tenemos un theme, meterlo dentro de la carpeta /static creada
 
 ![](/images/mezzaninecloud.png)
 ![](/images/mezzaninecloud1.png)
