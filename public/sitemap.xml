@@ -3,152 +3,157 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://alexrr12341.github.io/</loc>
+    <loc>https://www.alexrrinformatico.com/</loc>
+    <lastmod>2020-01-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.alexrrinformatico.com/posts/iptables/</loc>
+    <lastmod>2020-01-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.alexrrinformatico.com/posts/</loc>
+    <lastmod>2020-01-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.alexrrinformatico.com/posts/gpg/</loc>
     <lastmod>2019-12-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alexrr12341.github.io/posts/gpg/</loc>
+    <loc>https://www.alexrrinformatico.com/posts/pythoncms/</loc>
     <lastmod>2019-12-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alexrr12341.github.io/posts/pythoncms/</loc>
+    <loc>https://www.alexrrinformatico.com/posts/python/</loc>
     <lastmod>2019-12-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alexrr12341.github.io/posts/python/</loc>
+    <loc>https://www.alexrrinformatico.com/posts/firmas/</loc>
     <lastmod>2019-12-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alexrr12341.github.io/posts/firmas/</loc>
+    <loc>https://www.alexrrinformatico.com/posts/apache/</loc>
     <lastmod>2019-12-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alexrr12341.github.io/posts/</loc>
+    <loc>https://www.alexrrinformatico.com/posts/nginx/</loc>
     <lastmod>2019-12-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alexrr12341.github.io/posts/apache/</loc>
+    <loc>https://www.alexrrinformatico.com/posts/dns/</loc>
     <lastmod>2019-12-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alexrr12341.github.io/posts/nginx/</loc>
-    <lastmod>2019-12-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://alexrr12341.github.io/posts/dns/</loc>
-    <lastmod>2019-12-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://alexrr12341.github.io/posts/scriptrepositorio/</loc>
+    <loc>https://www.alexrrinformatico.com/posts/scriptrepositorio/</loc>
     <lastmod>2019-10-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alexrr12341.github.io/posts/creating-a-new-theme/</loc>
+    <loc>https://www.alexrrinformatico.com/posts/creating-a-new-theme/</loc>
     <lastmod>2019-10-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alexrr12341.github.io/categories/</loc>
+    <loc>https://www.alexrrinformatico.com/categories/</loc>
     <lastmod>2019-10-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alexrr12341.github.io/categories/development/</loc>
+    <loc>https://www.alexrrinformatico.com/categories/development/</loc>
     <lastmod>2019-10-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alexrr12341.github.io/tags/development/</loc>
+    <loc>https://www.alexrrinformatico.com/tags/development/</loc>
     <lastmod>2019-10-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alexrr12341.github.io/posts/raid5/</loc>
+    <loc>https://www.alexrrinformatico.com/posts/raid5/</loc>
     <lastmod>2019-10-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alexrr12341.github.io/tags/go/</loc>
+    <loc>https://www.alexrrinformatico.com/tags/go/</loc>
     <lastmod>2019-10-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alexrr12341.github.io/categories/golang/</loc>
+    <loc>https://www.alexrrinformatico.com/categories/golang/</loc>
     <lastmod>2019-10-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alexrr12341.github.io/tags/golang/</loc>
+    <loc>https://www.alexrrinformatico.com/tags/golang/</loc>
     <lastmod>2019-10-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alexrr12341.github.io/tags/hugo/</loc>
+    <loc>https://www.alexrrinformatico.com/tags/hugo/</loc>
     <lastmod>2019-10-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alexrr12341.github.io/posts/oracle/</loc>
+    <loc>https://www.alexrrinformatico.com/posts/oracle/</loc>
     <lastmod>2019-10-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alexrr12341.github.io/tags/</loc>
+    <loc>https://www.alexrrinformatico.com/tags/</loc>
     <lastmod>2019-10-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alexrr12341.github.io/posts/hugo/</loc>
+    <loc>https://www.alexrrinformatico.com/posts/hugo/</loc>
     <lastmod>2019-09-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alexrr12341.github.io/posts/raid1/</loc>
+    <loc>https://www.alexrrinformatico.com/posts/raid1/</loc>
     <lastmod>2019-09-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alexrr12341.github.io/tags/templates/</loc>
+    <loc>https://www.alexrrinformatico.com/tags/templates/</loc>
     <lastmod>2019-09-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alexrr12341.github.io/tags/themes/</loc>
+    <loc>https://www.alexrrinformatico.com/tags/themes/</loc>
     <lastmod>2019-09-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://alexrr12341.github.io/about/</loc>
+    <loc>https://www.alexrrinformatico.com/about/</loc>
   </url>
   
   <url>
-    <loc>http://alexrr12341.github.io/contact/</loc>
+    <loc>https://www.alexrrinformatico.com/contact/</loc>
   </url>
   
   <url>
-    <loc>http://alexrr12341.github.io/contactar/</loc>
+    <loc>https://www.alexrrinformatico.com/contactar/</loc>
   </url>
   
   <url>
-    <loc>http://alexrr12341.github.io/projects/</loc>
+    <loc>https://www.alexrrinformatico.com/projects/</loc>
   </url>
   
   <url>
-    <loc>http://alexrr12341.github.io/projects/</loc>
+    <loc>https://www.alexrrinformatico.com/projects/</loc>
   </url>
   
   <url>
-    <loc>http://alexrr12341.github.io/sobre/</loc>
+    <loc>https://www.alexrrinformatico.com/sobre/</loc>
   </url>
   
 </urlset>
